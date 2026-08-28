@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Switch Plan — 4 Weeks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --paper:#111A1F;
+  --card:#1B252B;
+  --ink:#E6EDEB;
+  --ink-soft:#8CA0A6;
+  --amber:#E9A93A;
+  --amber-wash:rgba(233,169,58,.26);
+  --mint:#5BAE8E;
+  --rule:#2C3A41;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:880px;margin:0 auto;padding:26px 20px 72px}
+
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);
+}
+h1{
+  font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(44px,12.5vw,80px);line-height:.92;letter-spacing:-.01em;
+  text-transform:uppercase;margin:6px 0 0;
+}
+h1 .mark{position:relative;display:inline-block;z-index:0}
+h1 .mark::before{
+  content:"";position:absolute;z-index:-1;left:-.04em;right:-.04em;top:.24em;bottom:.12em;
+  background:var(--amber-wash);transform:skewX(-9deg) rotate(-.7deg);
+}
+.quote{margin:20px 0 0;padding:14px 0 14px 16px;border-left:3px solid var(--amber)}
+.quote p{
+  margin:0;font-family:"Barlow Condensed",sans-serif;font-weight:500;
+  font-size:clamp(19px,4.6vw,25px);line-height:1.2;
+}
+.quote cite{
+  display:block;margin-top:6px;font-style:normal;
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);
+}
+.thesis{margin:16px 0 0;max-width:54ch;font-size:16.5px;color:var(--ink-soft)}
+.thesis b{color:var(--ink);font-weight:600}
+
+.meter{
+  margin:22px 0 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:12px 0;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+}
+.meter-num{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:34px;line-height:1}
+.meter-label{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-soft);
+}
+.bar{flex:1 1 170px;height:8px;background:#243138;position:relative;min-width:150px}
+.bar span{position:absolute;inset:0 auto 0 0;width:0;background:var(--mint);transition:width .45s cubic-bezier(.2,.7,.3,1)}
+
+/* ---------- tabs ---------- */
+.tabs{
+  display:flex;gap:0;margin:30px 0 0;overflow-x:auto;
+  border-bottom:1px solid var(--rule);-webkit-overflow-scrolling:touch;
+}
+.tabs::-webkit-scrollbar{display:none}
+.tab{
+  flex:0 0 auto;background:none;border:none;cursor:pointer;
+  padding:11px 15px 10px;font:inherit;color:var(--ink-soft);
+  border-bottom:3px solid transparent;margin-bottom:-1px;
+  display:flex;flex-direction:column;align-items:flex-start;gap:2px;
+  white-space:nowrap;transition:color .15s;
+}
+.tab:hover{color:var(--ink)}
+.tab .t-name{
+  font-family:"Barlow Condensed",sans-serif;font-weight:600;
+  font-size:20px;text-transform:uppercase;line-height:1;
+}
+.tab .t-meta{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--amber)}
+.tab[aria-selected="true"] .t-meta{color:var(--mint)}
+.tab:focus-visible{outline:2px solid var(--amber);outline-offset:-2px}
+
+.panel[hidden]{display:none}
+.panel{padding-top:26px;animation:fade .22s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.p-head{margin-bottom:4px}
+.p-title{
+  font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(28px,7vw,38px);text-transform:uppercase;line-height:1;margin:0;
+}
+.p-why{font-size:15px;color:var(--ink-soft);margin:8px 0 22px;max-width:58ch}
+
+.sub-head{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink);
+  margin:24px 0 6px;padding-bottom:5px;border-bottom:1px solid var(--rule);
+}
+.panel .sub-head:first-of-type{margin-top:0}
+code{font-family:"IBM Plex Mono",monospace;font-size:.85em;background:#26333A;padding:1px 4px;border-radius:2px}
+
+ul{list-style:none;margin:0;padding:0}
+li{margin:0 0 2px}
+label{display:flex;gap:11px;align-items:flex-start;padding:8px 10px 8px 8px;cursor:pointer;transition:background .15s}
+label:hover{background:#1A242A}
+input[type=checkbox]{
+  appearance:none;-webkit-appearance:none;flex:0 0 auto;width:17px;height:17px;margin:3px 0 0;
+  border:1.5px solid var(--ink);background:transparent;cursor:pointer;
+  display:grid;place-content:center;border-radius:2px;
+}
+input[type=checkbox]:checked{background:var(--mint);border-color:var(--mint)}
+input[type=checkbox]:checked::after{
+  content:"";width:9px;height:5px;border-left:2px solid var(--paper);border-bottom:2px solid var(--paper);
+  transform:translateY(-1px) rotate(-45deg);
+}
+input[type=checkbox]:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.task{font-size:15.5px;position:relative}
+.task::after{
+  content:"";position:absolute;left:0;right:0;top:52%;height:1.5px;background:var(--ink-soft);
+  transform:scaleX(0);transform-origin:left;transition:transform .28s ease;
+}
+label.done .task{color:var(--ink-soft)}
+label.done .task::after{transform:scaleX(1)}
+.opt{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--amber);border:1px solid var(--amber);padding:1px 5px;margin-left:7px;
+  vertical-align:2px;white-space:nowrap;
+}
+
+.standing{
+  margin-top:30px;background:#22303A;color:var(--ink);
+  padding:20px 22px;border-top:3px solid var(--amber);
+}
+.standing .eyebrow{color:var(--amber)}
+.standing p{margin:8px 0 0;font-size:16px;max-width:56ch}
+.standing b{color:#fff;font-weight:600}
+
+.card{background:var(--card);border-left:3px solid var(--amber);padding:15px 17px;margin-bottom:11px}
+.card h3{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px;
+}
+.card p{margin:0;font-size:15px}
+.card p + p{margin-top:8px}
+.card b{font-weight:600}
+
+footer{
+  margin-top:42px;padding-top:14px;border-top:1px solid var(--rule);
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-soft);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+button.reset{
+  font:inherit;letter-spacing:.1em;text-transform:uppercase;background:none;border:none;
+  color:var(--ink-soft);text-decoration:underline;cursor:pointer;padding:0;
+}
+button.reset:hover{color:var(--ink)}
+
+@media (max-width:560px){
+  .tab{padding:10px 12px 9px}
+  .tab .t-name{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Farhan · SDET switch · starting Aug 2026</div>
+  <h1>Four<br>weeks,<br><span class="mark">then apply</span></h1>
+
+  <blockquote class="quote">
+    <p id="q-text">You miss 100% of the shots you don't take.</p>
+    <cite id="q-who">Wayne Gretzky</cite>
+  </blockquote>
+
+  <p class="thesis">You already have the frameworks and two real projects you own. This isn't about learning a new stack — it's about being able to <b>explain what you built</b> without fumbling. Applications go out in week 1, not week 4.</p>
+
+  <div class="standing" style="margin-top:20px">
+    <div class="eyebrow">On the early mornings</div>
+    <p>25 minutes on Java, five mornings a week. <b>That's the whole ask.</b> Not an hour, not weekends too. A short session you actually do every day beats a long one you dread by Thursday — and you're already spending your energy on a job that's draining you.</p>
+    <p style="margin-top:10px">Two rules: <b>miss one day, that's fine — miss two, restart the same day.</b> And one full day off a week, no guilt. Burning out in week 3 costs more than any topic on this page.</p>
+  </div>
+
+  <div class="meter">
+    <div><div class="meter-num" id="pct">0%</div><div class="meter-label">done</div></div>
+    <div class="bar"><span id="fill"></span></div>
+    <div><div class="meter-num">~33</div><div class="meter-label">hours total</div></div>
+  </div>
+
+  <div class="tabs" role="tablist" id="tabs">
+    <button class="tab" role="tab" id="tab-0" aria-controls="panel-0" aria-selected="true">
+      <span class="t-name">Java</span><span class="t-meta" data-count="0">0/0 · daily</span></button>
+    <button class="tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="false">
+      <span class="t-name">Week 1</span><span class="t-meta" data-count="1">0/0 · 7h</span></button>
+    <button class="tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false">
+      <span class="t-name">Week 2</span><span class="t-meta" data-count="2">0/0 · 10h</span></button>
+    <button class="tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false">
+      <span class="t-name">Week 3</span><span class="t-meta" data-count="3">0/0 · 9h</span></button>
+    <button class="tab" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false">
+      <span class="t-name">Week 4</span><span class="t-meta" data-count="4">0/0 · 7h</span></button>
+    <button class="tab" role="tab" id="tab-5" aria-controls="panel-5" aria-selected="false">
+      <span class="t-name">Reference</span><span class="t-meta">always on</span></button>
+  </div>
+
+  <!-- ================= JAVA REVISION ================= -->
+  <section class="panel" role="tabpanel" id="panel-0" aria-labelledby="tab-0" data-week="0">
+    <div class="p-head"><h2 class="p-title">Java, from cold</h2></div>
+    <p class="p-why">Runs alongside everything else, ~25 minutes a morning. Order matters — each block assumes the one above it. Don't read about Java; type it. Use any online compiler so there's no setup friction at 6am.</p>
+
+    <div class="sub-head">Block 1 · Syntax muscle memory — 2 days</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="jr1"><span class="task">Write a class with a main method from a blank file, no template. Print something. Do it three times until it's automatic</span></label></li>
+      <li><label><input type="checkbox" data-k="jr2"><span class="task">Variables and types — int, long, double, boolean, char, String. Primitive vs wrapper, and what autoboxing is</span></label></li>
+      <li><label><input type="checkbox" data-k="jr3"><span class="task">if/else, switch, for, enhanced for, while. Write one small program using each</span></label></li>
+      <li><label><input type="checkbox" data-k="jr4"><span class="task">Methods — parameters, return types, static vs non-static, and why main is static</span></label></li>
+      <li><label><input type="checkbox" data-k="jr5"><span class="task">Arrays — declare, loop, find max. Then know why you'd usually reach for ArrayList instead</span></label></li>
+    </ul>
+
+    <div class="sub-head">Block 2 · Strings — 2 days</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="jr6"><span class="task">The methods you'll actually use: length, charAt, substring, split, trim, toLowerCase, contains, replace, equalsIgnoreCase</span></label></li>
+      <li><label><input type="checkbox" data-k="jr7"><span class="task">Immutability — what it means and why a String can't be changed in place</span></label></li>
+      <li><label><input type="checkbox" data-k="jr8"><span class="task"><code>==</code> vs <code>.equals()</code>, and the string pool. This is asked constantly</span></label></li>
+      <li><label><input type="checkbox" data-k="jr9"><span class="task">StringBuilder — and why concatenating in a loop with + is O(n²)</span></label></li>
+    </ul>
+
+    <div class="sub-head">Block 3 · OOP — 3 days</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="jr10"><span class="task">Class vs object. Constructors, including overloaded ones. The <code>this</code> keyword</span></label></li>
+      <li><label><input type="checkbox" data-k="jr11"><span class="task">Encapsulation — private fields with getters and setters, and why it isn't just ceremony</span></label></li>
+      <li><label><input type="checkbox" data-k="jr12"><span class="task">Inheritance and <code>super</code>. Then overriding vs overloading, with a concrete example of each</span></label></li>
+      <li><label><input type="checkbox" data-k="jr13"><span class="task">Polymorphism — parent reference holding a child object, and why that's useful</span></label></li>
+      <li><label><input type="checkbox" data-k="jr14"><span class="task">Abstraction — interface vs abstract class, and when you'd pick each</span></label></li>
+      <li><label><input type="checkbox" data-k="jr15"><span class="task">Map all four pillars onto your own Selenium framework — BasePage, page classes, driver setup. That's your interview answer, not animals and shapes</span></label></li>
+    </ul>
+
+    <div class="sub-head">Block 4 · Collections — 3 days</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="jr16"><span class="task">ArrayList — add, get, remove, size, iterate. The workhorse; be fluent</span></label></li>
+      <li><label><input type="checkbox" data-k="jr17"><span class="task">HashMap — put, get, containsKey, keySet, entrySet, iterate. Second workhorse</span></label></li>
+      <li><label><input type="checkbox" data-k="jr18"><span class="task">HashSet and why duplicates vanish. List vs Set vs Map in one sentence each</span></label></li>
+      <li><label><input type="checkbox" data-k="jr19"><span class="task">ArrayList vs LinkedList, HashMap vs LinkedHashMap vs TreeMap</span></label></li>
+      <li><label><input type="checkbox" data-k="jr20"><span class="task">HashMap internals — buckets, hashing, collisions, and why <code>hashCode</code> and <code>equals</code> must agree</span></label></li>
+    </ul>
+
+    <div class="sub-head">Block 5 · Exceptions and streams — 2 days</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="jr21"><span class="task">try/catch/finally, multiple catch blocks, try-with-resources</span></label></li>
+      <li><label><input type="checkbox" data-k="jr22"><span class="task">Checked vs unchecked, throw vs throws, and writing a custom exception</span></label></li>
+      <li><label><input type="checkbox" data-k="jr23"><span class="task">final vs finally vs finalize — a guaranteed question</span></label></li>
+      <li><label><input type="checkbox" data-k="jr24"><span class="task">Streams — filter, map, collect. Enough to read them and write a simple one</span></label></li>
+      <li><label><input type="checkbox" data-k="jr25"><span class="task">Lambdas at a basic level, since TestNG and REST Assured code is full of them</span></label></li>
+    </ul>
+
+    <div class="sub-head">Block 6 · Tie it to testing — 2 days</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="jr26"><span class="task">Reread one of your own page classes and name every Java concept in it out loud</span></label></li>
+      <li><label><input type="checkbox" data-k="jr27"><span class="task">Write a tiny utility from scratch — read a properties file, return a config value. Real, useful, small</span></label></li>
+      <li><label><input type="checkbox" data-k="jr28"><span class="task">Explain to yourself why POM uses classes and objects at all. If you can do that, Java has landed</span></label></li>
+    </ul>
+
+    <div class="standing">
+      <div class="eyebrow">Pace</div>
+      <p>Two weeks of mornings gets you through all six blocks. <b>Blocks 3 and 4 are the ones interviews actually test</b> — if you're running short, slow down there and skim the rest.</p>
+    </div>
+  </section>
+
+  <!-- ================= WEEK 1 ================= -->
+  <section class="panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" data-week="1" hidden>
+    <div class="p-head"><h2 class="p-title">Get on the market</h2></div>
+    <p class="p-why">The gap between applying and a first technical round is 2–4 weeks. That gap is your prep time, and it's free. Nothing this week requires knowledge you don't already have.</p>
+
+    <div class="sub-head">Resume</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="a1"><span class="task">Rebuild around the two projects you own — concession upload API and timetable bulk ingestion — each with the impact number in the first line</span></label></li>
+      <li><label><input type="checkbox" data-k="a2"><span class="task">One page. Order: summary, skills, experience, projects, education. Education last — you're no longer selling the degree</span></label></li>
+      <li><label><input type="checkbox" data-k="a3"><span class="task">Skills line: Java, Selenium, TestNG, REST Assured, Postman, SQL, Spring Boot, Git, Jira, Excel/Apache POI</span></label></li>
+      <li><label><input type="checkbox" data-k="a4"><span class="task">Delete anything you can't defend for five minutes. An unexplainable line on a resume costs more than a missing one</span></label></li>
+      <li><label><input type="checkbox" data-k="a5"><span class="task">Title yourself honestly — QA Engineer or SDET Intern, whatever's on your letter. Don't inflate; it surfaces in background checks</span></label></li>
+      <li><label><input type="checkbox" data-k="a6"><span class="task">Save as PDF, named <code>Farhan_QA_SDET.pdf</code>, and check it opens correctly on a phone</span></label></li>
+    </ul>
+
+    <div class="sub-head">Profiles</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="b1"><span class="task">LinkedIn headline that says what you do, not where you work. Turn on Open To Work, recruiters-only</span></label></li>
+      <li><label><input type="checkbox" data-k="b2"><span class="task">Naukri profile 100% complete, resume uploaded, and log in weekly — recency affects who sees you</span></label></li>
+      <li><label><input type="checkbox" data-k="b3"><span class="task">README on both GitHub repos: what it tests, how to run it, tech used. Most repos get opened and closed in 20 seconds</span></label></li>
+      <li><label><input type="checkbox" data-k="b4"><span class="task">Pin the two repos on your GitHub profile so they're the first thing visible</span></label></li>
+    </ul>
+
+    <div class="sub-head">Applying</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="c1"><span class="task">15–20 applications this week. Volume matters more than perfect targeting at this stage</span></label></li>
+      <li><label><input type="checkbox" data-k="c2"><span class="task">Message 5 people for referrals — college seniors, ex-colleagues, anyone from the Swiggy or Mavenir processes</span></label></li>
+      <li><label><input type="checkbox" data-k="c3"><span class="task">Hold back 2–3 top-choice companies until week 4, once you've warmed up on the others</span></label></li>
+      <li><label><input type="checkbox" data-k="c4"><span class="task">Start a tracking sheet: company, role, date applied, source, status, contact</span></label></li>
+    </ul>
+
+    <div class="sub-head">Story prep</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d1"><span class="task">Write out the concession endpoint story in full — problem, what you built, how failures are handled, the impact</span></label></li>
+      <li><label><input type="checkbox" data-k="d2"><span class="task">Same for timetable ingestion — 20 seconds per schedule, 1,200 schedules, ~7 hours down to ~1</span></label></li>
+      <li><label><input type="checkbox" data-k="d3"><span class="task">Pin the numbers so they never wobble: 3 schools, 400+ students each</span></label></li>
+      <li><label><input type="checkbox" data-k="d4"><span class="task">Draft the test cases you'd write for the concession API — use the Reference tab method</span></label></li>
+    </ul>
+  </section>
+
+  <!-- ================= WEEK 2 ================= -->
+  <section class="panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" data-week="2" hidden>
+    <div class="p-head"><h2 class="p-title">Revive your own repos</h2></div>
+    <p class="p-why">You can't touch company code, and you don't need to. Depth in the two frameworks you already built beats a third one you half-know. Two days each, then a day to rehearse.</p>
+
+    <div class="sub-head">Selenium POM — saucedemo</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="s1"><span class="task">Clone and run <code>mvn clean test</code>. Expect breakage — Chrome has moved on. Fix by dropping WebDriverManager and letting Selenium Manager resolve the driver</span></label></li>
+      <li><label><input type="checkbox" data-k="s2"><span class="task">Walk BaseTest line by line. Know why setup is <code>@BeforeMethod</code> not <code>@BeforeClass</code>, and what breaks if the driver is a plain field rather than ThreadLocal when tests run in parallel</span></label></li>
+      <li><label><input type="checkbox" data-k="s3"><span class="task">Walk your page classes. Know what <code>PageFactory.initElements</code> actually does — it creates lazy proxies, which is exactly why StaleElementReferenceException happens after a re-render</span></label></li>
+      <li><label><input type="checkbox" data-k="s4"><span class="task">Build a WaitUtils class: visibility, clickability, invisibility, and one FluentWait. Then delete every <code>Thread.sleep</code> in the repo and route through it</span></label></li>
+      <li><label><input type="checkbox" data-k="s5"><span class="task">Add a data-driven login test with <code>@DataProvider</code> — valid user, locked-out user, wrong password, empty fields. Assert the error text, not just that it failed</span></label></li>
+      <li><label><input type="checkbox" data-k="s6"><span class="task">Add one JavascriptExecutor case (scroll into view, or a click that's being intercepted) and know when it's a legitimate fix versus a bandage over a bad wait</span></label></li>
+      <li><label><input type="checkbox" data-k="s7"><span class="task">Locator strategy pass — replace any brittle absolute XPath with relative XPath or CSS. Be ready to argue CSS vs XPath</span></label></li>
+      <li><label><input type="checkbox" data-k="s8"><span class="task">Know your driver lifecycle end to end: who creates it, who quits it, what leaks if quit is skipped</span></label></li>
+    </ul>
+
+    <div class="sub-head">REST Assured — DummyJSON</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="r1"><span class="task">Rerun and confirm the auth chain still works: login → extract accessToken → authenticated GET</span></label></li>
+      <li><label><input type="checkbox" data-k="r2"><span class="task">Pull request setup into a RequestSpecBuilder and responses into a ResponseSpecBuilder, so base URI, headers and content type live in one place</span></label></li>
+      <li><label><input type="checkbox" data-k="r3"><span class="task">Replace raw JSON strings with POJOs and let serialisation handle the body. This gets asked specifically</span></label></li>
+      <li><label><input type="checkbox" data-k="r4"><span class="task">Add negative tests: wrong password, missing token, tampered token, non-existent ID, malformed payload. Assert status code <em>and</em> error body</span></label></li>
+      <li><label><input type="checkbox" data-k="r5"><span class="task">Write one assertion two ways — JSONPath extraction versus Hamcrest matchers — so you can explain the difference</span></label></li>
+      <li><label><input type="checkbox" data-k="r6"><span class="task">Explain how the token moves between tests without a soup of static variables</span></label></li>
+      <li><label><input type="checkbox" data-k="r7"><span class="task">Add a response time assertion and a schema validation check<span class="opt">if time</span></span></label></li>
+    </ul>
+
+    <div class="sub-head">Repo hygiene</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="g1"><span class="task">Clean commit messages on the new work. Recruiters do scroll the commit list</span></label></li>
+      <li><label><input type="checkbox" data-k="g2"><span class="task">Add a test report screenshot to each README so the value is visible without cloning</span></label></li>
+    </ul>
+
+    <div class="sub-head">Then</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="w2e"><span class="task">Whiteboard both framework structures from memory, no notes. If you can't draw it, you can't defend it</span></label></li>
+      <li><label><input type="checkbox" data-k="w2f"><span class="task">TestNG parallel execution + a retry listener<span class="opt">if time</span></span></label></li>
+    </ul>
+  </section>
+
+  <!-- ================= WEEK 3 ================= -->
+  <section class="panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" data-week="3" hidden>
+    <div class="p-head"><h2 class="p-title">Theory and fundamentals</h2></div>
+    <p class="p-why">Nothing to build here — pure recall, and it gets asked every round. The QA theory is the part you're already doing daily but probably can't name cleanly.</p>
+
+    <div class="sub-head">QA fundamentals</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="t1"><span class="task">Smoke vs sanity vs regression vs retesting. Smoke = is the build testable at all. Sanity = narrow check on one fixed area. Retesting = the specific bug again. Regression = did the fix break anything else</span></label></li>
+      <li><label><input type="checkbox" data-k="t2"><span class="task">Severity vs priority, with a case for each combination — especially high severity + low priority (crash on a screen nobody uses) and low severity + high priority (client's name misspelt on the login page)</span></label></li>
+      <li><label><input type="checkbox" data-k="t3"><span class="task">Defect life cycle — New, Assigned, Open, Fixed, Retest, Verified, Closed, plus Reopened, Deferred, Rejected, Duplicate, Not a bug</span></label></li>
+      <li><label><input type="checkbox" data-k="t4"><span class="task">STLC phases and the deliverable of each one</span></label></li>
+      <li><label><input type="checkbox" data-k="t5"><span class="task">Verification vs validation. Black, white and grey box. Functional vs non-functional</span></label></li>
+      <li><label><input type="checkbox" data-k="t6"><span class="task">Entry and exit criteria, and a real answer to "when do you stop testing?"</span></label></li>
+      <li><label><input type="checkbox" data-k="t7"><span class="task">Test plan vs test strategy vs scenario vs case — which is a document, which is a line item</span></label></li>
+      <li><label><input type="checkbox" data-k="t8"><span class="task">Agile testing: where QA sits in a sprint, definition of done, what you do during grooming, shift-left</span></label></li>
+      <li><label><input type="checkbox" data-k="t9"><span class="task">Pick two real bugs you found at Agasty and be ready to give severity, priority, repro steps and resolution</span></label></li>
+    </ul>
+
+    <div class="sub-head">Test design techniques</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="u1"><span class="task">Equivalence partitioning — split inputs into classes that behave the same, test one from each</span></label></li>
+      <li><label><input type="checkbox" data-k="u2"><span class="task">Boundary value analysis — min−1, min, max, max+1. Bugs cluster at edges</span></label></li>
+      <li><label><input type="checkbox" data-k="u3"><span class="task">Decision table — for rules where multiple conditions combine, like concession eligibility</span></label></li>
+      <li><label><input type="checkbox" data-k="u4"><span class="task">State transition — for lifecycles. Your student promotion and withdrawal flows are a perfect example to cite</span></label></li>
+      <li><label><input type="checkbox" data-k="u5"><span class="task">Error guessing and exploratory testing — and when each is appropriate to admit to</span></label></li>
+    </ul>
+
+    <div class="sub-head">Java core</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="j1"><span class="task">Collections — ArrayList vs LinkedList, List vs Set vs Map, when each is the right pick</span></label></li>
+      <li><label><input type="checkbox" data-k="j2"><span class="task">HashMap internals — buckets, hashing, collision handling, and why <code>hashCode</code> and <code>equals</code> must agree</span></label></li>
+      <li><label><input type="checkbox" data-k="j3"><span class="task">Strings — immutability, <code>==</code> vs <code>equals</code>, String vs StringBuilder (concatenation in a loop is O(n²))</span></label></li>
+      <li><label><input type="checkbox" data-k="j4"><span class="task">Streams — filter, map, collect, groupingBy, and one real use from your own data work</span></label></li>
+      <li><label><input type="checkbox" data-k="j5"><span class="task">OOP four pillars with examples from your own framework, not textbook shapes and animals</span></label></li>
+      <li><label><input type="checkbox" data-k="j6"><span class="task">Overloading vs overriding, interface vs abstract class, static vs instance</span></label></li>
+      <li><label><input type="checkbox" data-k="j7"><span class="task">Exceptions — checked vs unchecked, try-with-resources, final vs finally vs finalize</span></label></li>
+    </ul>
+
+    <div class="sub-head">SQL</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="q1"><span class="task">Joins — inner, left, right, full, and self join. Draw them if it helps</span></label></li>
+      <li><label><input type="checkbox" data-k="q2"><span class="task">GROUP BY with HAVING, and why HAVING isn't WHERE</span></label></li>
+      <li><label><input type="checkbox" data-k="q3"><span class="task">Subqueries, DISTINCT, ORDER BY, LIMIT</span></label></li>
+      <li><label><input type="checkbox" data-k="q4"><span class="task">Second-highest salary — the classic. Know both the subquery and the window-function version</span></label></li>
+      <li><label><input type="checkbox" data-k="q5"><span class="task">How you'd use SQL to verify a bulk upload actually landed correctly. This is your real-world angle</span></label></li>
+    </ul>
+
+    <div class="sub-head">API basics</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="p1"><span class="task">HTTP methods and which are idempotent. PUT vs PATCH vs POST</span></label></li>
+      <li><label><input type="checkbox" data-k="p2"><span class="task">Status codes — 200/201/204, 400/401/403/404/409/422, 500/502/503. Know when 401 vs 403</span></label></li>
+      <li><label><input type="checkbox" data-k="p3"><span class="task">Auth types — Basic, Bearer/JWT, API key, OAuth at a conceptual level</span></label></li>
+      <li><label><input type="checkbox" data-k="p4"><span class="task">30 minutes on Playwright docs — enough to answer "no, but here's how it maps"</span></label></li>
+    </ul>
+  </section>
+
+  <!-- ================= WEEK 4 ================= -->
+  <section class="panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" data-week="4" hidden>
+    <div class="p-head"><h2 class="p-title">Rehearse and sharpen</h2></div>
+    <p class="p-why">By now interviews should be landing. Treat the early ones as practice — they're the best diagnostic you'll get.</p>
+
+    <div class="sub-head">DSA — arrays and strings only</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="x1"><span class="task">Reverse a string, check palindrome, count character frequency</span></label></li>
+      <li><label><input type="checkbox" data-k="x2"><span class="task">Second largest element, remove duplicates, find the missing number</span></label></li>
+      <li><label><input type="checkbox" data-k="x3"><span class="task">Two sum, check anagram, first non-repeating character</span></label></li>
+      <li><label><input type="checkbox" data-k="x4"><span class="task">Balanced parentheses, and one sliding window problem</span></label></li>
+      <li><label><input type="checkbox" data-k="x5"><span class="task">Be able to state time and space complexity for each without being asked</span></label></li>
+    </ul>
+
+    <div class="sub-head">Interview answers</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="y1"><span class="task">"Tell me about yourself" — 90 seconds, ending on why you're looking</span></label></li>
+      <li><label><input type="checkbox" data-k="y2"><span class="task">"Why are you leaving?" — growth and scope, never bitterness about pay or people. Practise this one until it's boring</span></label></li>
+      <li><label><input type="checkbox" data-k="y3"><span class="task">Both project stories under 2 minutes each, said out loud, not read</span></label></li>
+      <li><label><input type="checkbox" data-k="y4"><span class="task">Framework walkthrough — Selenium waits, stale elements, driver lifecycle, why POM</span></label></li>
+      <li><label><input type="checkbox" data-k="y5"><span class="task">"How did you test what you built?" — walk the five buckets from the Reference tab</span></label></li>
+      <li><label><input type="checkbox" data-k="y6"><span class="task">Three questions to ask them — team structure, automation coverage today, what the first 90 days look like</span></label></li>
+    </ul>
+
+    <div class="sub-head">Logistics</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="z1"><span class="task">Write down your number and your walk-away number. Don't disclose current CTC first if you can avoid it</span></label></li>
+      <li><label><input type="checkbox" data-k="z2"><span class="task">Confirm your notice period and whether it's buyable</span></label></li>
+      <li><label><input type="checkbox" data-k="z3"><span class="task">One recorded mock — phone camera, 15 minutes, watch it back once</span></label></li>
+      <li><label><input type="checkbox" data-k="z4"><span class="task">Keep applying. The pipeline doesn't stop because you have two interviews</span></label></li>
+    </ul>
+
+    <div class="standing">
+      <div class="eyebrow">Standing rule</div>
+      <p>Keep <b>extracting material from the current job</b> while you're still in it — specific bugs, specific numbers, specific things you streamlined. That's the part you can't get back after you leave.</p>
+    </div>
+  </section>
+
+  <!-- ================= REFERENCE ================= -->
+  <section class="panel" role="tabpanel" id="panel-5" aria-labelledby="tab-5" data-week="5" hidden>
+    <div class="p-head"><h2 class="p-title">Writing test cases</h2></div>
+    <p class="p-why">The most common live exercise: "here's a feature, write test cases." Have a method, not inspiration.</p>
+
+    <div class="card">
+      <h3>Scenario vs case</h3>
+      <p>A <b>scenario</b> is what you're verifying — one line, no steps. "Verify concession upload with an invalid admission number." A <b>test case</b> is the executable version with steps, data and an expected result. Scenarios come first and are broader; you derive several cases from one. Interviewers notice when you conflate them.</p>
+    </div>
+
+    <div class="card">
+      <h3>Anatomy of a case</h3>
+      <p>ID · Module · Title · Preconditions · Test data · Steps · Expected result · Actual result · Status · Priority. Two rules separate good from sloppy: one case verifies <b>one</b> thing, and the expected result is written before you ever run it.</p>
+      <p>Write steps so someone who's never seen the product can follow them. "Login and check fees" is not a step. "Navigate to Fees &gt; Concessions, click Bulk Upload, select valid_concessions.xlsx" is.</p>
+    </div>
+
+    <div class="card">
+      <h3>Coverage buckets — run through all of these</h3>
+      <p>Positive / happy path · Negative and invalid input · Boundary values · Empty and null · Duplicates · Permissions and roles · Data integrity after the action · Concurrency · UI and validation messages · Integration with downstream modules.</p>
+      <p>If you produce only happy paths, that's the rejection. The negative cases are the whole test of whether you think like a tester.</p>
+    </div>
+
+    <div class="card">
+      <h3>Worked example — your concession upload</h3>
+      <p><b>Positive:</b> valid sheet, all admission numbers exist, all concession types valid → all rows applied, error array empty, amounts correct in the database.</p>
+      <p><b>Negative:</b> admission number not found → row skipped, appears in error array with a reason, remaining rows still commit. Concession type not found → same. Blank admission number. Duplicate admission number within one sheet. Concession already applied to that student.</p>
+      <p><b>Boundary:</b> single-row sheet · headers only · large sheet, 400+ rows · concession amount of zero · amount exceeding the fee total.</p>
+      <p><b>Structural:</b> wrong file type · corrupt file · missing required column · extra unexpected column · columns reordered · numbers stored as text.</p>
+      <p><b>Integration:</b> student fee statement reflects the concession · reports and dashboards update · a student promoted or withdrawn mid-upload.</p>
+      <p>That's your answer to "how did you test what you built," and it beats "I checked it in Postman" by a distance.</p>
+    </div>
+
+    <div class="card">
+      <h3>If they give you something generic</h3>
+      <p>Classic prompts are a login page, a lift, an ATM, a pen. First move is always the same — ask two or three clarifying questions about requirements and scope before writing anything. Then walk the buckets out loud. Candidates who start listing cases immediately score worse than candidates who scope first.</p>
+    </div>
+
+    <div class="p-head" style="margin-top:38px"><h2 class="p-title">Talk track</h2></div>
+    <p class="p-why">The four things you should be able to say without thinking.</p>
+
+    <div class="card">
+      <h3>What you own — 01</h3>
+      <p>Built a bulk fee concession upload API in Spring Boot. Takes an Excel sheet keyed on admission number, applies concessions per row, isolates failures into an error array so valid rows still commit. Used by the internal onboarding team across 3 schools, 400+ students each. Hours down to minutes.</p>
+      <p>If pressed: the admission-number lookup <em>is</em> the validation. Blank or wrong number, the row fails and gets reported back.</p>
+    </div>
+
+    <div class="card">
+      <h3>What you own — 02</h3>
+      <p>Built Excel-based bulk ingestion for IB/IGCSE timetables. Manual entry ran about 20 seconds per schedule across 1,200 schedules — roughly 7 hours. Brought it to about 1.</p>
+      <p>The pattern to name out loud: you find where onboarding is doing repetitive manual entry and turn it into a bulk path.</p>
+    </div>
+
+    <div class="card">
+      <h3>On Playwright</h3>
+      <p>"I've worked in Selenium with POM and explicit waits. Haven't used Playwright, but the concepts map — auto-waiting instead of manual waits, locators instead of WebElements. I'd pick it up quickly."</p>
+    </div>
+
+    <div class="card">
+      <h3>On being a fresher</h3>
+      <p>You are one on paper, and that's fine — apply to 0–1 year roles. But the work isn't fresher work. Lead with what you shipped, not with how long you've been there.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span id="count">0 done</span>
+    <button class="reset" id="reset">Clear all</button>
+  </footer>
+
+</div>
+
+<script>
+const quotes = [
+  ["You miss 100% of the shots you don't take.", "Wayne Gretzky"],
+  ["Done is better than perfect.", "Sheryl Sandberg"],
+  ["Fall seven times, stand up eight.", "Japanese proverb"],
+  ["The second best time to plant a tree is now.", "Proverb"],
+  ["Slow is smooth, smooth is fast.", "Unknown"],
+  ["Hard work beats talent when talent doesn't work hard.", "Tim Notke"],
+  ["It always seems impossible until it's done.", "Nelson Mandela"],
+  ["Whether you think you can or you can't, you're right.", "Henry Ford"],
+  ["Start where you are. Use what you have.", "Arthur Ashe"],
+  ["The obstacle is the way.", "Marcus Aurelius"],
+  ["Discipline equals freedom.", "Jocko Willink"],
+  ["Little by little, a little becomes a lot.", "Tanzanian proverb"],
+  ["Action is the foundational key to all success.", "Pablo Picasso"],
+  ["Success is small efforts repeated day in and day out.", "Robert Collier"],
+  ["A smooth sea never made a skilled sailor.", "Proverb"],
+  ["Do the hard thing first.", "Unknown"],
+  ["You don't have to be great to start.", "Zig Ziglar"],
+  ["Comparison is the thief of joy.", "Theodore Roosevelt"],
+  ["Energy and persistence conquer all things.", "Benjamin Franklin"],
+  ["Fortune favours the bold.", "Latin proverb"],
+  ["The best way out is always through.", "Robert Frost"],
+  ["Well begun is half done.", "Aristotle"],
+  ["Don't watch the clock. Do what it does — keep going.", "Sam Levenson"],
+  ["Courage is grace under pressure.", "Ernest Hemingway"],
+  ["What we fear doing most is usually what we most need to do.", "Tim Ferriss"],
+  ["Quality is never an accident. It is the result of intelligent effort.", "John Ruskin"],
+  ["The expert in anything was once a beginner.", "Helen Hayes"],
+  ["Motivation gets you started. Habit keeps you going.", "Jim Ryun"],
+  ["Be so good they can't ignore you.", "Steve Martin"],
+  ["Growth and comfort do not coexist.", "Ginni Rometty"]
+];
+
+async function showQuote(){
+  let last = -1;
+  try {
+    const r = localStorage.getItem('sdet-roadmap-lastquote');
+    if(r !== null) last = parseInt(r, 10);
+  } catch(e){ /* first visit */ }
+  let i = Math.floor(Math.random()*quotes.length);
+  while(quotes.length > 1 && i === last) i = Math.floor(Math.random()*quotes.length);
+  document.getElementById('q-text').textContent = quotes[i][0];
+  document.getElementById('q-who').textContent = quotes[i][1];
+  try { localStorage.setItem('sdet-roadmap-lastquote', String(i)); }
+  catch(e){ /* not critical */ }
+}
+showQuote();
+
+/* ---------- tabs ---------- */
+const tabs = Array.from(document.querySelectorAll('.tab'));
+const panels = Array.from(document.querySelectorAll('.panel'));
+
+function selectTab(idx){
+  tabs.forEach((t,i)=>{
+    t.setAttribute('aria-selected', i===idx ? 'true' : 'false');
+    panels[i].hidden = i !== idx;
+  });
+}
+tabs.forEach((t,i)=>{
+  t.addEventListener('click', ()=>selectTab(i));
+  t.addEventListener('keydown', e=>{
+    if(e.key === 'ArrowRight'){ const n=(i+1)%tabs.length; selectTab(n); tabs[n].focus(); }
+    if(e.key === 'ArrowLeft'){ const n=(i-1+tabs.length)%tabs.length; selectTab(n); tabs[n].focus(); }
+  });
+});
+
+/* ---------- progress ---------- */
+const boxes = Array.from(document.querySelectorAll('input[type=checkbox]'));
+
+function paint(){
+  const done = boxes.filter(b=>b.checked).length;
+  const pct = Math.round(done/boxes.length*100);
+  document.getElementById('pct').textContent = pct + '%';
+  document.getElementById('fill').style.width = pct + '%';
+  document.getElementById('count').textContent = done + ' of ' + boxes.length + ' done';
+  boxes.forEach(b=>b.closest('label').classList.toggle('done', b.checked));
+
+  panels.forEach(p=>{
+    const wk = p.dataset.week;
+    const meta = document.querySelector('.t-meta[data-count="'+wk+'"]');
+    if(!meta) return;
+    const inWeek = Array.from(p.querySelectorAll('input[type=checkbox]'));
+    const d = inWeek.filter(b=>b.checked).length;
+    const hrs = meta.textContent.split('· ')[1] || '';
+    meta.textContent = d + '/' + inWeek.length + ' · ' + hrs;
+  });
+}
+
+async function save(){
+  const state = {};
+  boxes.forEach(b=>{ if(b.checked) state[b.dataset.k]=1; });
+  try { localStorage.setItem('sdet-roadmap-2026-08', JSON.stringify(state)); }
+  catch(e){ console.error('Could not save progress', e); }
+}
+
+async function load(){
+  try {
+    const res = localStorage.getItem('sdet-roadmap-2026-08');
+    if(res){
+      const state = JSON.parse(res);
+      boxes.forEach(b=>{ b.checked = !!state[b.dataset.k]; });
+    }
+  } catch(e){ /* nothing saved yet */ }
+  paint();
+}
+
+boxes.forEach(b=>b.addEventListener('change', ()=>{ paint(); save(); }));
+
+document.getElementById('reset').addEventListener('click', async ()=>{
+  boxes.forEach(b=>b.checked=false);
+  paint();
+  try { localStorage.removeItem('sdet-roadmap-2026-08'); }
+  catch(e){ console.error('Could not clear progress', e); }
+});
+
+load();
+</script>
+</body>
+</html>
