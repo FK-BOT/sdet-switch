@@ -1,6 +1,3 @@
-
-
-Sdet prep · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +27,7 @@ body{
   font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;
 }
 .wrap{max-width:880px;margin:0 auto;padding:26px 20px 72px}
- 
+
 .eyebrow{
   font-family:"IBM Plex Mono",monospace;font-size:11px;
   letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);
@@ -57,7 +54,7 @@ h1 .mark::before{
 }
 .thesis{margin:16px 0 0;max-width:56ch;font-size:16.5px;color:var(--ink-soft)}
 .thesis b{color:var(--ink);font-weight:600}
- 
+
 .meter{
   margin:22px 0 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
   padding:12px 0;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
@@ -69,7 +66,7 @@ h1 .mark::before{
 }
 .bar{flex:1 1 170px;height:8px;background:#243138;position:relative;min-width:150px}
 .bar span{position:absolute;inset:0 auto 0 0;width:0;background:var(--mint);transition:width .45s cubic-bezier(.2,.7,.3,1)}
- 
+
 .tabs{
   display:flex;gap:0;margin:30px 0 0;overflow-x:auto;
   border-bottom:1px solid var(--rule);-webkit-overflow-scrolling:touch;
@@ -91,17 +88,17 @@ h1 .mark::before{
 .tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--amber)}
 .tab[aria-selected="true"] .t-meta{color:var(--mint)}
 .tab:focus-visible{outline:2px solid var(--amber);outline-offset:-2px}
- 
+
 .panel[hidden]{display:none}
 .panel{padding-top:26px;animation:fade .22s ease}
 @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
- 
+
 .p-title{
   font-family:"Barlow Condensed",sans-serif;font-weight:700;
   font-size:clamp(28px,7vw,38px);text-transform:uppercase;line-height:1;margin:0;
 }
 .p-why{font-size:15px;color:var(--ink-soft);margin:8px 0 22px;max-width:60ch}
- 
+
 .sub-head{
   font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
   letter-spacing:.14em;text-transform:uppercase;color:var(--ink);
@@ -109,7 +106,7 @@ h1 .mark::before{
 }
 .panel .sub-head:first-of-type{margin-top:0}
 code{font-family:"IBM Plex Mono",monospace;font-size:.85em;background:#26333A;padding:1px 4px;border-radius:2px}
- 
+
 ul{list-style:none;margin:0;padding:0}
 li{margin:0 0 2px}
 label{display:flex;gap:11px;align-items:flex-start;padding:8px 10px 8px 8px;cursor:pointer;transition:background .15s}
@@ -139,7 +136,7 @@ label.done .task::after{transform:scaleX(1)}
   margin-left:8px;vertical-align:1px;white-space:nowrap;
 }
 .task .opt::before{content:"\200B"}
- 
+
 .note{
   margin-top:26px;background:#22303A;color:var(--ink);
   padding:18px 20px;border-top:3px solid var(--amber);
@@ -147,7 +144,7 @@ label.done .task::after{transform:scaleX(1)}
 .note .eyebrow{color:var(--amber)}
 .note p{margin:8px 0 0;font-size:15.5px;max-width:58ch}
 .note b{color:#fff;font-weight:600}
- 
+
 .card{background:var(--card);border-left:3px solid var(--amber);padding:15px 17px;margin-bottom:11px}
 .card h3{
   font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
@@ -156,13 +153,13 @@ label.done .task::after{transform:scaleX(1)}
 .card p{margin:0;font-size:15px}
 .card p + p{margin-top:8px}
 .card b{font-weight:600}
- 
+
 pre{
   background:var(--card);border-left:3px solid var(--rule);
   padding:12px 14px;overflow-x:auto;margin:10px 0 0;
   font-family:"IBM Plex Mono",monospace;font-size:12.5px;line-height:1.55;color:var(--ink-soft);
 }
- 
+
 footer{
   margin-top:42px;padding-top:14px;border-top:1px solid var(--rule);
   font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;
@@ -174,7 +171,7 @@ button.reset{
   color:var(--ink-soft);text-decoration:underline;cursor:pointer;padding:0;
 }
 button.reset:hover{color:var(--ink)}
- 
+
 @media (max-width:560px){
   .tab{padding:10px 13px 9px}
   .tab .t-name{font-size:18px}
@@ -184,28 +181,28 @@ button.reset:hover{color:var(--ink)}
 </head>
 <body>
 <div class="wrap">
- 
+
   <div class="eyebrow">Farhan · SDET prep</div>
   <h1>Java.<br>Testing.<br><span class="mark">One project.</span></h1>
- 
+
   <blockquote class="quote">
     <p id="q-text">You miss 100% of the shots you don't take.</p>
     <cite id="q-who">Wayne Gretzky</cite>
   </blockquote>
- 
-  <p class="thesis">Three things, nothing else — Java, testing vocabulary, and <b>one framework covering UI and API together</b>. Weeks are keyboard time, since that's the part that needs you at home. <b>Reading and rehearsing sit in the Anytime list</b> and fill the gaps around them.</p>
- 
+
+  <p class="thesis">Three things, nothing else — Java, testing vocabulary, and <b>one framework covering UI and API together</b>. Roughly 16 days at a sustainable pace, applications running from day one. <b>Full days now, but not endless ones — that's exactly what you just left.</b></p>
+
   <div class="note" style="margin-top:20px">
     <div class="eyebrow">On the early mornings</div>
     <p>25 minutes a day is the whole ask. <b>A short session you actually do beats a long one you dread by Thursday.</b> Miss one day, fine. Miss two, restart the same day. One full day off a week, no guilt.</p>
   </div>
- 
+
   <div class="meter">
     <div><div class="meter-num" id="pct">0%</div><div class="meter-label">done</div></div>
     <div class="bar"><span id="fill"></span></div>
     <div><div class="meter-num" id="total">0</div><div class="meter-label">items</div></div>
   </div>
- 
+
   <div class="tabs" role="tablist" id="tabs">
     <button class="tab" role="tab" id="tab-p" aria-controls="panel-p" aria-selected="true">
       <span class="t-name">Plan</span><span class="t-meta" data-count="p">0/0</span></button>
@@ -220,90 +217,172 @@ button.reset:hover{color:var(--ink)}
     <button class="tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false">
       <span class="t-name">Reference</span><span class="t-meta">always on</span></button>
   </div>
- 
+
   <!-- ================= PLAN ================= -->
   <section class="panel" role="tabpanel" id="panel-p" aria-labelledby="tab-p" data-week="p">
-    <h2 class="p-title">Weekly targets</h2>
-    <p class="p-why">Weeks are <b>keyboard time</b> — Java typing and the project build, both of which need you at home with an IDE open. Everything that's reading or rehearsing sits in the Anytime list below and gets slotted into commutes, breaks and evenings when you're too tired to code.</p>
- 
-    <div class="sub-head">Week 1 · Java syntax back in the fingers — ~5 hrs</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="w1a"><span class="task">Java blocks 1 and 2 — syntax, types, loops, methods, arrays, strings. Type everything, no copy-paste</span></label></li>
-      <li><label><input type="checkbox" data-k="w1b"><span class="task">Scaffold the new project — Maven, dependencies, package structure, config.properties, .gitignore. First commit</span></label></li>
-      <li><label><input type="checkbox" data-k="w1c"><span class="task">Coding tab, Tier 1 strings — the first four. One a day, ten minutes each</span></label></li>
-    </ul>
- 
-    <div class="sub-head">Week 2 · OOP and collections — ~6 hrs</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="w2a"><span class="task">Java block 3, OOP. Slow down here — this is the most-asked block</span></label></li>
-      <li><label><input type="checkbox" data-k="w2b"><span class="task">Java block 4, collections. ArrayList and HashMap fluency first, then internals</span></label></li>
-      <li><label><input type="checkbox" data-k="w2c"><span class="task">Write ConfigReader for the project — small, real, and it exercises everything from block 3</span></label></li>
-      <li><label><input type="checkbox" data-k="w2d"><span class="task">Coding tab, the rest of Tier 1 strings plus all Tier 1 arrays</span></label></li>
-    </ul>
- 
-    <div class="sub-head">Week 3 · Project, UI half — ~6 hrs</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="w3a"><span class="task">BaseTest with ThreadLocal driver, page classes for home, login, products, cart</span></label></li>
-      <li><label><input type="checkbox" data-k="w3b"><span class="task">WaitUtils, and zero Thread.sleep anywhere in the repo</span></label></li>
-      <li><label><input type="checkbox" data-k="w3c"><span class="task">Login tests including the negative cases — wrong password, blank fields, unregistered email</span></label></li>
-      <li><label><input type="checkbox" data-k="w3d"><span class="task">Coding tab, Tier 1 number logic — all five, they're quick</span></label></li>
-    </ul>
- 
-    <div class="sub-head">Week 4 · Project, API half — ~6 hrs</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="w4a"><span class="task">Java block 5 — exceptions and streams. You'll want them for the next part</span></label></li>
-      <li><label><input type="checkbox" data-k="w4b"><span class="task">Specs, service classes, POJOs instead of HashMaps</span></label></li>
-      <li><label><input type="checkbox" data-k="w4c"><span class="task">Happy paths, then the negative paths — wrong credentials, missing field, invalid ID, malformed payload</span></label></li>
-      <li><label><input type="checkbox" data-k="w4d"><span class="task">Coding tab, Tier 2 collections and the "actually gets asked" set</span></label></li>
-    </ul>
- 
-    <div class="sub-head">Week 5 · The crossover — ~5 hrs</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="w5a"><span class="task">API creates the user, UI logs in with it. Then UI adds to cart, API verifies it</span></label></li>
-      <li><label><input type="checkbox" data-k="w5b"><span class="task">Cart flow, screenshot-on-failure, schema validation, response-time assertion</span></label></li>
-      <li><label><input type="checkbox" data-k="w5c"><span class="task">Java block 6 — reread your own service classes and name every concept in them</span></label></li>
-      <li><label><input type="checkbox" data-k="w5d"><span class="task">Coding tab, Selenium exceptions — all eight. These come up in almost every round</span></label></li>
-    </ul>
- 
-    <div class="sub-head">Week 6 · Ship it — ~4 hrs</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="w6a"><span class="task">Tags to split ui and api suites, parallel execution, confirm ThreadLocal holds</span></label></li>
-      <li><label><input type="checkbox" data-k="w6b"><span class="task">README — what it tests, the stack, how to run it, why UI and API live together</span></label></li>
-      <li><label><input type="checkbox" data-k="w6c"><span class="task">Rename the old RestAssured repo classes to PascalCase while you're in the mood</span></label></li>
-      <li><label><input type="checkbox" data-k="w6d"><span class="task">Put the framework on your resume, replacing the two older project entries</span></label></li>
-      <li><label><input type="checkbox" data-k="w6e"><span class="task">Whiteboard the whole structure from memory. If you can’t draw it, you can’t defend it</span></label></li>
-      <li><label><input type="checkbox" data-k="w6f"><span class="task">Coding tab, redo any Tier 1 question from a blank file. If you can still do them cold, they’ve stuck</span></label></li>
-    </ul>
- 
-    <div class="note">
-      <div class="eyebrow">Anytime · no laptop needed</div>
-      <p>These are reading and rehearsal. Commute, lunch, before bed, whenever coding isn’t possible. <b>Do the first two in week 1 regardless</b> — they take about an hour total and they’re what saves you if a recruiter calls early.</p>
+    <h2 class="p-title">Daily targets</h2>
+    <p class="p-why">Full days now, so structure matters more, not less — the thing that broke the last job was exactly this: work with no edges. <b>~5–5.5 hrs a day, four blocks, real breaks between them.</b> Applications start today, in parallel with everything else, because the 1–3 week lag between applying and a first interview is dead time either way — better to be building through it than waiting to start.</p>
+
+    <div class="note" style="margin-top:0;margin-bottom:22px">
+      <div class="eyebrow">The shape of every day</div>
+      <p><b>Morning (2 hrs)</b> Java + coding questions, fresh brain first &nbsp;·&nbsp; <b>Late morning (45 min)</b> applications, 8–10 sent &nbsp;·&nbsp; <b>Afternoon (2–2.5 hrs)</b> the project &nbsp;·&nbsp; <b>Evening (20–30 min)</b> rehearse out loud. <b>One full day off a week, no guilt</b> — that's not optional, it's the whole point of having left.</p>
     </div>
- 
+
+    <div class="sub-head">Day 1 — set up and open the applications</div>
     <ul>
-      <li><label><input type="checkbox" data-k="a1"><span class="task">Both project stories, said out loud, under 2 minutes each. Highest value hour in the plan</span></label></li>
-      <li><label><input type="checkbox" data-k="a2"><span class="task">"Why are you leaving" and the intern-to-full-time framing, rehearsed until boring</span></label></li>
-      <li><label><input type="checkbox" data-k="a3"><span class="task">Two real Agasty bugs written up — severity, priority, repro steps, resolution</span></label></li>
-      <li><label><input type="checkbox" data-k="a4"><span class="task">Testing tab, Core distinctions — smoke, sanity, regression, retest, severity vs priority</span></label></li>
-      <li><label><input type="checkbox" data-k="a5"><span class="task">Testing tab, Process — STLC, defect life cycle, Agile, test pyramid</span></label></li>
-      <li><label><input type="checkbox" data-k="a6"><span class="task">Testing tab, Test design techniques — all five, with an example of each from your own work</span></label></li>
-      <li><label><input type="checkbox" data-k="a7"><span class="task">Testing tab, API fundamentals — methods, status codes, auth types, what to assert</span></label></li>
-      <li><label><input type="checkbox" data-k="a8"><span class="task">Testing tab, SQL — joins, GROUP BY, subqueries, second-highest salary</span></label></li>
-      <li><label><input type="checkbox" data-k="a9"><span class="task">Reference tab, the test-case method — then write cases for one feature you tested at work this week</span></label></li>
-      <li><label><input type="checkbox" data-k="a10"><span class="task">Explain your existing Selenium framework from memory — waits, stale elements, driver lifecycle, why POM</span></label></li>
+      <li><label><input type="checkbox" data-k="d1a"><span class="task">Java blocks 1 — syntax, types, loops, methods, arrays. Type everything, no copy-paste</span></label></li>
+      <li><label><input type="checkbox" data-k="d1b"><span class="task">Naukri: set notice period to Immediate, resume uploaded, profile 100%. LinkedIn: Open to Work on</span></label></li>
+      <li><label><input type="checkbox" data-k="d1c"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d1d"><span class="task">Scaffold the new project — Maven, dependencies, package structure, config.properties, .gitignore. First commit</span></label></li>
+      <li><label><input type="checkbox" data-k="d1e"><span class="task">Both project stories and the why-you-left line, said out loud, under 2 minutes each. Reference tab has both</span></label></li>
     </ul>
- 
+
+    <div class="sub-head">Day 2</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d2a"><span class="task">Java block 2 — strings, immutability, == vs equals, StringBuilder</span></label></li>
+      <li><label><input type="checkbox" data-k="d2b"><span class="task">Coding tab, Tier 1 strings — first four</span></label></li>
+      <li><label><input type="checkbox" data-k="d2c"><span class="task">Apply to 8–10 roles. Message 3–5 people for referrals</span></label></li>
+      <li><label><input type="checkbox" data-k="d2d"><span class="task">Project — BaseTest with ThreadLocal driver, home and login page classes</span></label></li>
+    </ul>
+
+    <div class="sub-head">Day 3</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d3a"><span class="task">Java block 3 begins — class vs object, constructors, encapsulation</span></label></li>
+      <li><label><input type="checkbox" data-k="d3b"><span class="task">Coding tab, rest of Tier 1 strings</span></label></li>
+      <li><label><input type="checkbox" data-k="d3c"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d3d"><span class="task">Project — products and cart page classes, WaitUtils. Zero Thread.sleep anywhere</span></label></li>
+    </ul>
+
+    <div class="sub-head">Day 4</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d4a"><span class="task">Java block 3 continued — inheritance, polymorphism, abstraction</span></label></li>
+      <li><label><input type="checkbox" data-k="d4b"><span class="task">Coding tab, Tier 1 arrays — first four</span></label></li>
+      <li><label><input type="checkbox" data-k="d4c"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d4d"><span class="task">Project — login tests including the negative cases: wrong password, blank fields, unregistered email</span></label></li>
+    </ul>
+
+    <div class="sub-head">Day 5</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d5a"><span class="task">Java block 3 finish — map all four pillars onto your own service classes from memory</span></label></li>
+      <li><label><input type="checkbox" data-k="d5b"><span class="task">Coding tab, rest of Tier 1 arrays</span></label></li>
+      <li><label><input type="checkbox" data-k="d5c"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d5d"><span class="task">Project — cart flow: add, verify quantity and price, remove, verify empty state</span></label></li>
+    </ul>
+
     <div class="note">
-      <div class="eyebrow">If a week slips</div>
-      <p>Let it be a coding week, not the Anytime list. <b>The project is what gets you hired; the talk track is what stops you losing a round you’d otherwise have won.</b> And if an interview lands in week 2, go anyway — early rounds are the best diagnostic you’ll get.</p>
+      <div class="eyebrow">Day off</div>
+      <p>Take it. <b>No Java, no applications, no project.</b> A day genuinely off is what makes day 8 as sharp as day 1.</p>
+    </div>
+
+    <div class="sub-head">Day 6</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d6a"><span class="task">Java block 4 — ArrayList and HashMap fluency, add, get, remove, iterate</span></label></li>
+      <li><label><input type="checkbox" data-k="d6b"><span class="task">Coding tab, Tier 1 number logic — all five</span></label></li>
+      <li><label><input type="checkbox" data-k="d6c"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d6d"><span class="task">Project — screenshot-on-failure via a JUnit 5 TestWatcher extension. UI half is now feature-complete</span></label></li>
+    </ul>
+
+    <div class="note">
+      <div class="eyebrow">Checkpoint</div>
+      <p><b>UI half of the project is done, Java is half covered, and roughly 45–50 applications are out.</b> If an interview lands now, you're answerable on testing theory and can walk through a real framework, even an unfinished one.</p>
+    </div>
+
+    <div class="sub-head">Day 7</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d7a"><span class="task">Java block 4 finish — internals: buckets, hashing, collisions, ArrayList vs LinkedList</span></label></li>
+      <li><label><input type="checkbox" data-k="d7b"><span class="task">Coding tab, Tier 2 collections</span></label></li>
+      <li><label><input type="checkbox" data-k="d7c"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d7d"><span class="task">Project — API half setup: BaseApiTest, RequestSpecBuilder, ResponseSpecBuilder</span></label></li>
+    </ul>
+
+    <div class="sub-head">Day 8</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d8a"><span class="task">Java block 5 — exceptions: try/catch/finally, checked vs unchecked, custom exceptions</span></label></li>
+      <li><label><input type="checkbox" data-k="d8b"><span class="task">Coding tab, Tier 2 "actually gets asked" — balanced parentheses, sliding window</span></label></li>
+      <li><label><input type="checkbox" data-k="d8c"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d8d"><span class="task">Project — service classes and POJOs for request/response bodies, not HashMaps</span></label></li>
+    </ul>
+
+    <div class="sub-head">Day 9</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d9a"><span class="task">Java block 5 finish — streams and lambdas, filter/map/collect</span></label></li>
+      <li><label><input type="checkbox" data-k="d9b"><span class="task">Coding tab, rest of "actually gets asked" — array rotation, pattern printing, substrings</span></label></li>
+      <li><label><input type="checkbox" data-k="d9c"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d9d"><span class="task">Project — happy-path API tests: product list, search, account creation, login</span></label></li>
+    </ul>
+
+    <div class="sub-head">Day 10</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d10a"><span class="task">Java block 6 — reread your own service classes, name every concept out loud</span></label></li>
+      <li><label><input type="checkbox" data-k="d10b"><span class="task">Coding tab, Selenium exceptions — all eight</span></label></li>
+      <li><label><input type="checkbox" data-k="d10c"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d10d"><span class="task">Project — negative API paths: wrong credentials, missing field, invalid ID, malformed payload</span></label></li>
+    </ul>
+
+    <div class="note">
+      <div class="eyebrow">Day off</div>
+      <p><b>Same as before — take the full day.</b> Two weeks in is exactly when people start cutting this corner. Don't.</p>
+    </div>
+
+    <div class="sub-head">Day 11</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d11a"><span class="task">Testing tab, Core distinctions and Process — all ten items. You know this from the job, just attach the words</span></label></li>
+      <li><label><input type="checkbox" data-k="d11b"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d11c"><span class="task">Project — schema validation and a response-time assertion on one endpoint</span></label></li>
+    </ul>
+
+    <div class="sub-head">Day 12</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d12a"><span class="task">Testing tab, Test design techniques and Architecture — all ten items</span></label></li>
+      <li><label><input type="checkbox" data-k="d12b"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d12c"><span class="task">Project — the crossover: API creates a user, UI logs in with those credentials</span></label></li>
+    </ul>
+
+    <div class="sub-head">Day 13</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d13a"><span class="task">Testing tab, API fundamentals and SQL — all ten items</span></label></li>
+      <li><label><input type="checkbox" data-k="d13b"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d13c"><span class="task">Project — the reverse crossover: UI adds to cart, API verifies it landed correctly</span></label></li>
+    </ul>
+
+    <div class="sub-head">Day 14</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d14a"><span class="task">Reference tab, the test-case method — then write real cases for one Agasty feature from memory</span></label></li>
+      <li><label><input type="checkbox" data-k="d14b"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d14c"><span class="task">Project — tags to split ui/api suites, parallel execution, confirm ThreadLocal holds</span></label></li>
+    </ul>
+
+    <div class="note">
+      <div class="eyebrow">Checkpoint</div>
+      <p><b>Project is functionally complete, Java is fully covered, testing theory is fully covered, and roughly 100–110 applications are out.</b> Everything left is polish and interview reps.</p>
+    </div>
+
+    <div class="sub-head">Day 15</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d15a"><span class="task">Redo three Tier 1 coding questions cold, from a blank file, no notes. If they've stuck, they'll hold under interview pressure</span></label></li>
+      <li><label><input type="checkbox" data-k="d15b"><span class="task">Apply to 8–10 roles</span></label></li>
+      <li><label><input type="checkbox" data-k="d15c"><span class="task">Project — README: what it tests, the stack, how to run it, why UI and API live together</span></label></li>
+    </ul>
+
+    <div class="sub-head">Day 16 onward — steady state</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d16a"><span class="task">Whiteboard the whole project structure from memory. If you can't draw it, you can't defend it</span></label></li>
+      <li><label><input type="checkbox" data-k="d16b"><span class="task">Rename the old RestAssured repo classes to PascalCase, add negative tests there too</span></label></li>
+      <li><label><input type="checkbox" data-k="d16c"><span class="task">Keep applying, 8–10 a day, every weekday, for as long as it takes</span></label></li>
+      <li><label><input type="checkbox" data-k="d16d"><span class="task">From here, prioritise interview prep for anything that actually comes in over adding new material</span></label></li>
+    </ul>
+
+    <div class="note">
+      <div class="eyebrow">If a day slips</div>
+      <p>Applications and rehearsal are non-negotiable — they take under an hour combined and they're what a callback actually depends on. <b>Java and the project are what flex.</b> Missing a whole day is fine; missing the day off is the mistake, because that's the one that compounds.</p>
     </div>
   </section>
- 
+
   <!-- ================= JAVA ================= -->
   <section class="panel" role="tabpanel" id="panel-0" aria-labelledby="tab-0" data-week="0" hidden>
     <h2 class="p-title">Java, from cold</h2>
     <p class="p-why">Blocks run in order — each assumes the one above. Don't read about Java, type it. Any online compiler works, so there's no setup friction at 6am. Roughly two weeks of mornings.</p>
- 
+
     <div class="sub-head">Block 1 · Syntax muscle memory — 2 days</div>
     <ul>
       <li><label><input type="checkbox" data-k="jr1"><span class="task">Write a class with a main method from a blank file, no template. Three times, until it's automatic</span></label></li>
@@ -312,7 +391,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="jr4"><span class="task">Methods — parameters, return types, static vs non-static, and why main is static</span></label></li>
       <li><label><input type="checkbox" data-k="jr5"><span class="task">Arrays — declare, loop, find max. Then why you'd usually reach for ArrayList instead</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Block 2 · Strings — 2 days</div>
     <ul>
       <li><label><input type="checkbox" data-k="jr6"><span class="task">The methods you'll actually use: length, charAt, substring, split, trim, toLowerCase, contains, replace, equalsIgnoreCase</span></label></li>
@@ -320,7 +399,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="jr8"><span class="task"><code>==</code> vs <code>.equals()</code> and the string pool. Asked constantly</span></label></li>
       <li><label><input type="checkbox" data-k="jr9"><span class="task">StringBuilder, and why concatenating with + in a loop is O(n²)</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Block 3 · OOP — 3 days</div>
     <ul>
       <li><label><input type="checkbox" data-k="jr10"><span class="task">Class vs object. Constructors including overloaded ones. The <code>this</code> keyword</span></label></li>
@@ -330,7 +409,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="jr14"><span class="task">Abstraction — interface vs abstract class, and when you'd pick each</span></label></li>
       <li><label><input type="checkbox" data-k="jr15"><span class="task">Map all four pillars onto your own framework — BasePage, page classes, service classes. That's the interview answer, not animals and shapes</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Block 4 · Collections — 3 days</div>
     <ul>
       <li><label><input type="checkbox" data-k="jr16"><span class="task">ArrayList — add, get, remove, size, iterate. Be fluent, it's the workhorse</span></label></li>
@@ -339,7 +418,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="jr19"><span class="task">ArrayList vs LinkedList. HashMap vs LinkedHashMap vs TreeMap</span></label></li>
       <li><label><input type="checkbox" data-k="jr20"><span class="task">HashMap internals — buckets, hashing, collisions, and why <code>hashCode</code> and <code>equals</code> must agree</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Block 5 · Exceptions and streams — 2 days</div>
     <ul>
       <li><label><input type="checkbox" data-k="jr21"><span class="task">try/catch/finally, multiple catch blocks, try-with-resources</span></label></li>
@@ -348,30 +427,30 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="jr24"><span class="task">Streams — filter, map, collect. Enough to read them and write a simple one</span></label></li>
       <li><label><input type="checkbox" data-k="jr25"><span class="task">Lambdas at a basic level — JUnit and REST Assured code is full of them</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Block 6 · Tie it back — 2 days</div>
     <ul>
       <li><label><input type="checkbox" data-k="jr26"><span class="task">Reread your own UserApiService and name every Java concept in it out loud</span></label></li>
       <li><label><input type="checkbox" data-k="jr27"><span class="task">Write a small utility from scratch — read a properties file, return a config value. You'll use this in the project</span></label></li>
       <li><label><input type="checkbox" data-k="jr28"><span class="task">Explain to yourself why POM uses classes and objects at all. If you can do that, Java has landed</span></label></li>
     </ul>
- 
+
     <div class="note">
       <div class="eyebrow">Pace</div>
       <p><b>Blocks 3 and 4 are what interviews actually test.</b> If you're running short, slow down there and skim the rest.</p>
     </div>
   </section>
- 
+
   <!-- ================= CODING ================= -->
   <section class="panel" role="tabpanel" id="panel-c" aria-labelledby="tab-c" data-week="c" hidden>
     <h2 class="p-title">Coding questions</h2>
     <p class="p-why">SDET coding rounds are not LeetCode-hard. They're strings, arrays and HashMaps, usually with a "now do it without the built-in method" follow-up. Tier 1 is the real exam — if you can do those cold, you'll clear most screens.</p>
- 
+
     <div class="note" style="margin-top:0;margin-bottom:22px">
       <div class="eyebrow">How to practise</div>
       <p>Write it, run it, then <b>say the time and space complexity out loud before they ask</b>. Then delete it and write it again tomorrow. Recognition isn't recall — you need to produce these from a blank file.</p>
     </div>
- 
+
     <div class="sub-head">Tier 1 · Strings — must be automatic</div>
     <ul>
       <li><label><input type="checkbox" data-k="c1"><span class="task">Reverse a string — first with StringBuilder, then with a char array loop. They will ask for the second one</span></label></li>
@@ -383,7 +462,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="c7"><span class="task">Count vowels and consonants</span></label></li>
       <li><label><input type="checkbox" data-k="c8"><span class="task">Reverse the words in a sentence, keeping word order intact vs reversing it — know both</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Tier 1 · Arrays — must be automatic</div>
     <ul>
       <li><label><input type="checkbox" data-k="c9"><span class="task">Second largest element without sorting. Classic, and the without-sorting constraint is always added</span></label></li>
@@ -394,7 +473,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="c14"><span class="task">Sort an array without a built-in sort — bubble or selection, whichever you can write from memory</span></label></li>
       <li><label><input type="checkbox" data-k="c15"><span class="task">Move all zeros to the end, preserving the order of the rest</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Tier 1 · Number logic</div>
     <ul>
       <li><label><input type="checkbox" data-k="c16"><span class="task">Fibonacci — loop and recursion, and why recursion is worse here</span></label></li>
@@ -403,7 +482,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="c19"><span class="task">Reverse a number and sum its digits</span></label></li>
       <li><label><input type="checkbox" data-k="c20"><span class="task">Swap two numbers without a temp variable</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Tier 2 · Collections — likely</div>
     <ul>
       <li><label><input type="checkbox" data-k="c21"><span class="task">Word frequency in a sentence, then print the most frequent word</span></label></li>
@@ -413,7 +492,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="c25"><span class="task">Remove duplicates from an ArrayList, with and without a Set</span></label></li>
       <li><label><input type="checkbox" data-k="c26"><span class="task">The same problem twice — once with a loop, once with streams. Being able to switch is the flex</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Tier 2 · Actually gets asked</div>
     <ul>
       <li><label><input type="checkbox" data-k="c32"><span class="task">Balanced parentheses using a Stack</span></label></li>
@@ -422,7 +501,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="c35"><span class="task">Pyramid and star pattern printing — dull, but service companies keep asking</span></label></li>
       <li><label><input type="checkbox" data-k="c31"><span class="task">Count occurrences of a substring inside a larger string</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Tier 2 · Selenium exceptions — know these cold</div>
     <ul>
       <li><label><input type="checkbox" data-k="e1"><span class="task">NoSuchElementException — locator didn't match. Wrong locator, or you didn't wait</span></label></li>
@@ -434,7 +513,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="e7"><span class="task">Java side: NullPointerException, ArrayIndexOutOfBounds, NumberFormatException, ClassCastException, ConcurrentModificationException</span></label></li>
       <li><label><input type="checkbox" data-k="e8"><span class="task">Checked vs unchecked, throw vs throws, and final vs finally vs finalize</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Tier 3 · Tester-flavoured — low priority</div>
     <ul>
       <li><label><input type="checkbox" data-k="c27"><span class="task">Read key-value pairs from a properties file. You're building this for the project anyway <span class="opt">optional</span></span></label></li>
@@ -442,18 +521,18 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="c29"><span class="task">Generate random test data for your framework <span class="opt">optional</span></span></label></li>
       <li><label><input type="checkbox" data-k="c30"><span class="task">Broken-links loop over a list of URLs <span class="opt">optional</span></span></label></li>
     </ul>
- 
+
     <div class="note">
       <div class="eyebrow">What they're actually testing</div>
       <p>Not whether you know the trick. <b>Whether you can turn a plain-English requirement into working code without freezing</b>, and whether you talk while you do it. Narrate your approach before you type — interviewers score the reasoning as much as the result.</p>
     </div>
   </section>
- 
+
   <!-- ================= TESTING ================= -->
   <section class="panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" data-week="1" hidden>
     <h2 class="p-title">Testing concepts</h2>
     <p class="p-why">You do most of this daily — you just can't name it cleanly yet. That gap is what costs marks in a round. Attaching the vocabulary is fast because the experience is already there.</p>
- 
+
     <div class="sub-head">Core distinctions</div>
     <ul>
       <li><label><input type="checkbox" data-k="t1"><span class="task">Smoke vs sanity vs regression vs retesting. Smoke = is the build testable at all. Sanity = narrow check on one fixed area. Retesting = the specific bug again. Regression = did the fix break anything else</span></label></li>
@@ -462,7 +541,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="t4"><span class="task">Test plan vs test strategy vs scenario vs case — which is a document, which is a line item</span></label></li>
       <li><label><input type="checkbox" data-k="t5"><span class="task">Entry and exit criteria, and a real answer to "when do you stop testing?"</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Process</div>
     <ul>
       <li><label><input type="checkbox" data-k="t6"><span class="task">STLC phases and the deliverable of each one</span></label></li>
@@ -471,7 +550,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="t9"><span class="task">The test pyramid — unit, integration, E2E — and why a top-heavy suite is slow and flaky</span></label></li>
       <li><label><input type="checkbox" data-k="t10"><span class="task">Pick two real bugs you found at Agasty. Be ready with severity, priority, repro steps and resolution</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Architecture — asked more than you'd expect</div>
     <ul>
       <li><label><input type="checkbox" data-k="m1"><span class="task">Monolith vs microservices — one deployable unit and one database, versus independently deployable services each owning their own data</span></label></li>
@@ -480,7 +559,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="m4"><span class="task">Know which one your Agasty ERP is and be able to say why</span></label></li>
       <li><label><input type="checkbox" data-k="m5"><span class="task">Client-server basics — what happens between typing a URL and seeing a page. Occasionally asked as a warm-up</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Test design techniques</div>
     <ul>
       <li><label><input type="checkbox" data-k="u1"><span class="task">Equivalence partitioning — split inputs into classes that behave the same, test one from each</span></label></li>
@@ -489,7 +568,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="u4"><span class="task">State transition — for lifecycles. Your student promotion and withdrawal flows are the example to cite</span></label></li>
       <li><label><input type="checkbox" data-k="u5"><span class="task">Error guessing and exploratory testing — and when each is appropriate to admit to</span></label></li>
     </ul>
- 
+
     <div class="sub-head">API fundamentals</div>
     <ul>
       <li><label><input type="checkbox" data-k="p1"><span class="task">HTTP methods and which are idempotent. PUT vs PATCH vs POST</span></label></li>
@@ -497,7 +576,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="p3"><span class="task">Auth types — Basic, Bearer/JWT, API key, OAuth conceptually. You've already built a JWT chain, so anchor it there</span></label></li>
       <li><label><input type="checkbox" data-k="p4"><span class="task">What to assert on an API response beyond status code — body, schema, headers, response time</span></label></li>
     </ul>
- 
+
     <div class="sub-head">SQL</div>
     <ul>
       <li><label><input type="checkbox" data-k="q1"><span class="task">Joins — inner, left, right, full, self</span></label></li>
@@ -507,12 +586,12 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="q5"><span class="task">How you'd verify a bulk upload actually landed correctly using SQL. Your real-world angle</span></label></li>
     </ul>
   </section>
- 
+
   <!-- ================= PROJECT ================= -->
   <section class="panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" data-week="2" hidden>
     <h2 class="p-title">One framework, UI + API</h2>
     <p class="p-why">Target: <b>automationexercise.com</b>. Deliberate choice — it's a full e-commerce UI <em>and</em> it publishes a documented API at /api_list, so one site gives you both halves and lets you write a test that crosses them. That crossover is the part almost no junior candidate has.</p>
- 
+
     <div class="sub-head">Setup</div>
     <ul>
       <li><label><input type="checkbox" data-k="s1"><span class="task">New Maven project, one repo. Dependencies: selenium-java, rest-assured, junit-jupiter, hamcrest. Nothing else yet</span></label></li>
@@ -520,7 +599,7 @@ button.reset:hover{color:var(--ink)}
       <li><label><input type="checkbox" data-k="s3"><span class="task">config.properties for base URLs and credentials, read by a ConfigReader utility. No hardcoded URLs anywhere</span></label></li>
       <li><label><input type="checkbox" data-k="s4"><span class="task">.gitignore covering target/ and the whole .idea/ directory. Get this right before the first commit</span></label></li>
     </ul>
- 
+
     <pre>src/test/java/
   base/       BaseTest, BaseApiTest, ConfigReader
   pages/      HomePage, LoginPage, ProductsPage, CartPage
@@ -529,7 +608,7 @@ button.reset:hover{color:var(--ink)}
   tests/api/  AuthApiTest, ProductApiTest
   utils/      WaitUtils, TestDataBuilder
 resources/    config.properties, testdata.json</pre>
- 
+
     <div class="sub-head">UI half — Selenium POM</div>
     <ul>
       <li><label><input type="checkbox" data-k="s5"><span class="task">BaseTest with driver setup in <code>@BeforeEach</code> and quit in <code>@AfterEach</code>. Use ThreadLocal from the start so parallel runs don't break later</span></label></li>
@@ -539,7 +618,7 @@ resources/    config.properties, testdata.json</pre>
       <li><label><input type="checkbox" data-k="s9"><span class="task">Cart flow: add product, verify quantity and price, remove it, verify empty state</span></label></li>
       <li><label><input type="checkbox" data-k="s10"><span class="task">Screenshot-on-failure via a JUnit 5 TestWatcher extension</span></label></li>
     </ul>
- 
+
     <div class="sub-head">API half — REST Assured</div>
     <ul>
       <li><label><input type="checkbox" data-k="s11"><span class="task">BaseApiTest with a shared RequestSpecBuilder and ResponseSpecBuilder</span></label></li>
@@ -549,14 +628,14 @@ resources/    config.properties, testdata.json</pre>
       <li><label><input type="checkbox" data-k="s15"><span class="task">Negative paths, the part your current repo is missing entirely: wrong credentials, missing required field, invalid ID, malformed payload, unsupported method. Assert status code <em>and</em> the error body</span></label></li>
       <li><label><input type="checkbox" data-k="s16"><span class="task">One schema validation check, and one response-time assertion</span></label></li>
     </ul>
- 
+
     <div class="sub-head">The crossover — your differentiator</div>
     <ul>
       <li><label><input type="checkbox" data-k="s17"><span class="task">Create a user via the API, then log in through the UI with those credentials. Setup via API is faster and less flaky than doing it through the browser — say that out loud in interviews</span></label></li>
       <li><label><input type="checkbox" data-k="s18"><span class="task">Add a product to the cart in the UI, then verify it via the API. Cross-layer consistency checking</span></label></li>
       <li><label><input type="checkbox" data-k="s19"><span class="task">Be able to explain when you'd test something at the API layer instead of the UI, and why that maps to the test pyramid</span></label></li>
     </ul>
- 
+
     <div class="sub-head">Finish it properly</div>
     <ul>
       <li><label><input type="checkbox" data-k="s20"><span class="task">JUnit 5 tags to separate <code>@Tag("ui")</code> from <code>@Tag("api")</code>, so each suite can run alone</span></label></li>
@@ -565,35 +644,35 @@ resources/    config.properties, testdata.json</pre>
       <li><label><input type="checkbox" data-k="s23"><span class="task">Clean commit history. Rename the old repo's classes to PascalCase too while you're at it</span></label></li>
       <li><label><input type="checkbox" data-k="s24"><span class="task">Whiteboard the whole structure from memory. If you can't draw it, you can't defend it</span></label></li>
     </ul>
- 
+
     <div class="note">
       <div class="eyebrow">Why this one project</div>
       <p>Every junior candidate has a saucedemo POM repo. <b>Almost none have a framework where the API sets up state for a UI test.</b> That single idea is worth more in an interview than three separate repos, and it's the honest answer to "what have you automated?"</p>
     </div>
   </section>
- 
+
   <!-- ================= REFERENCE ================= -->
   <section class="panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" data-week="3" hidden>
     <h2 class="p-title">Writing test cases</h2>
     <p class="p-why">The most common live exercise: "here's a feature, write test cases." Have a method, not inspiration.</p>
- 
+
     <div class="card">
       <h3>Scenario vs case</h3>
       <p>A <b>scenario</b> is what you're verifying — one line, no steps. "Verify concession upload with an invalid admission number." A <b>test case</b> is the executable version with steps, data and an expected result. Scenarios come first and are broader; you derive several cases from one. Interviewers notice when you conflate them.</p>
     </div>
- 
+
     <div class="card">
       <h3>Anatomy of a case</h3>
       <p>ID · Module · Title · Preconditions · Test data · Steps · Expected result · Actual result · Status · Priority. Two rules separate good from sloppy: one case verifies <b>one</b> thing, and the expected result is written before you ever run it.</p>
       <p>Write steps so someone who's never seen the product can follow them. "Login and check fees" is not a step. "Navigate to Fees &gt; Concessions, click Bulk Upload, select valid_concessions.xlsx" is.</p>
     </div>
- 
+
     <div class="card">
       <h3>Coverage buckets — walk all of them</h3>
       <p>Positive / happy path · Negative and invalid input · Boundary values · Empty and null · Duplicates · Permissions and roles · Data integrity after the action · Concurrency · UI and validation messages · Integration with downstream modules.</p>
       <p>If you produce only happy paths, that's the rejection. The negative cases are the whole test of whether you think like a tester.</p>
     </div>
- 
+
     <div class="card">
       <h3>Worked example — your concession upload</h3>
       <p><b>Positive:</b> valid sheet, all admission numbers exist, all concession types valid → all rows applied, error array empty, amounts correct in the database.</p>
@@ -602,51 +681,51 @@ resources/    config.properties, testdata.json</pre>
       <p><b>Structural:</b> wrong file type · corrupt file · missing required column · extra unexpected column · columns reordered · numbers stored as text.</p>
       <p><b>Integration:</b> student fee statement reflects the concession · reports and dashboards update · a student promoted or withdrawn mid-upload.</p>
     </div>
- 
+
     <div class="card">
       <h3>If they give you something generic</h3>
       <p>Classic prompts are a login page, a lift, an ATM, a pen. First move is always the same — ask two or three clarifying questions about requirements and scope before writing anything. Then walk the buckets out loud. Candidates who start listing cases immediately score worse than candidates who scope first.</p>
     </div>
- 
+
     <h2 class="p-title" style="margin-top:38px">Talk track</h2>
     <p class="p-why">The things you should be able to say without thinking.</p>
- 
+
     <div class="card">
       <h3>What you own — 01</h3>
       <p>Built a bulk fee-concession upload API in Spring Boot. Takes an Excel sheet keyed on admission number, applies concessions per row, isolates failures into an error array so valid rows still commit. Used by the onboarding team across 3 schools, 400+ students each. Hours down to minutes.</p>
       <p>If pressed: the admission-number lookup <em>is</em> the validation. Blank or wrong number, the row fails and gets reported back.</p>
     </div>
- 
+
     <div class="card">
       <h3>What you own — 02</h3>
       <p>Built Excel-based bulk ingestion for IB/IGCSE timetables. Manual entry ran ~20 seconds per schedule across 1,200 schedules — roughly 7 hours. Brought it to about 1.</p>
       <p>The pattern to name out loud: you find where onboarding is doing repetitive manual entry and turn it into a bulk path.</p>
     </div>
- 
+
     <div class="card">
       <h3>Why you're leaving</h3>
       <p>"The role is mostly manual QA and implementation. I want automation to be the actual job, and there isn't a path to that here."</p>
       <p>Forward-looking and true. Never pay, never colleagues, never hours — even though those are real.</p>
     </div>
- 
+
     <div class="card">
       <h3>On Playwright</h3>
       <p>"I've worked in Selenium with POM and explicit waits. Haven't used Playwright, but the concepts map — auto-waiting instead of manual waits, locators instead of WebElements. I'd pick it up quickly."</p>
     </div>
- 
+
     <div class="card">
       <h3>On the three-month tenure</h3>
       <p>"I joined as an intern in May and converted to full-time in July." Lead with the conversion — it says they valued you, and it stretches the timeline from July back to May.</p>
     </div>
   </section>
- 
+
   <footer>
     <span id="count">0 done</span>
     <button class="reset" id="reset">Clear all</button>
   </footer>
- 
+
 </div>
- 
+
 <script>
 const quotes = [
   ["You miss 100% of the shots you don't take.", "Wayne Gretzky"],
@@ -680,25 +759,25 @@ const quotes = [
   ["Be so good they can't ignore you.", "Steve Martin"],
   ["Growth and comfort do not coexist.", "Ginni Rometty"]
 ];
- 
+
 async function showQuote(){
   let last = -1;
   try {
-    const r = await window.storage.get('sdet-prep-lastquote');
-    if(r && r.value) last = parseInt(r.value, 10);
+    const r = localStorage.getItem('sdet-prep-lastquote');
+    if(r !== null) last = parseInt(r, 10);
   } catch(e){ /* first visit */ }
   let i = Math.floor(Math.random()*quotes.length);
   while(quotes.length > 1 && i === last) i = Math.floor(Math.random()*quotes.length);
   document.getElementById('q-text').textContent = quotes[i][0];
   document.getElementById('q-who').textContent = quotes[i][1];
-  try { await window.storage.set('sdet-prep-lastquote', String(i)); }
+  try { localStorage.setItem('sdet-prep-lastquote', String(i)); }
   catch(e){ /* not critical */ }
 }
 showQuote();
- 
+
 const tabs = Array.from(document.querySelectorAll('.tab'));
 const panels = Array.from(document.querySelectorAll('.panel'));
- 
+
 function selectTab(idx){
   tabs.forEach((t,i)=>{
     t.setAttribute('aria-selected', i===idx ? 'true' : 'false');
@@ -712,10 +791,10 @@ tabs.forEach((t,i)=>{
     if(e.key === 'ArrowLeft'){ const n=(i-1+tabs.length)%tabs.length; selectTab(n); tabs[n].focus(); }
   });
 });
- 
+
 const boxes = Array.from(document.querySelectorAll('input[type=checkbox]'));
 document.getElementById('total').textContent = boxes.length;
- 
+
 function paint(){
   const done = boxes.filter(b=>b.checked).length;
   const pct = Math.round(done/boxes.length*100);
@@ -723,7 +802,7 @@ function paint(){
   document.getElementById('fill').style.width = pct + '%';
   document.getElementById('count').textContent = done + ' of ' + boxes.length + ' done';
   boxes.forEach(b=>b.closest('label').classList.toggle('done', b.checked));
- 
+
   panels.forEach(p=>{
     const wk = p.dataset.week;
     const meta = document.querySelector('.t-meta[data-count="'+wk+'"]');
@@ -733,42 +812,35 @@ function paint(){
     meta.textContent = d + '/' + inPanel.length;
   });
 }
- 
+
 async function save(){
   const state = {};
   boxes.forEach(b=>{ if(b.checked) state[b.dataset.k]=1; });
-  try { await window.storage.set('sdet-prep-v2', JSON.stringify(state)); }
+  try { localStorage.setItem('sdet-prep-v2', JSON.stringify(state)); }
   catch(e){ console.error('Could not save progress', e); }
 }
- 
+
 async function load(){
   try {
-    const res = await window.storage.get('sdet-prep-v2');
-    if(res && res.value){
-      const state = JSON.parse(res.value);
+    const res = localStorage.getItem('sdet-prep-v2');
+    if(res){
+      const state = JSON.parse(res);
       boxes.forEach(b=>{ b.checked = !!state[b.dataset.k]; });
     }
   } catch(e){ /* nothing saved yet */ }
   paint();
 }
- 
+
 boxes.forEach(b=>b.addEventListener('change', ()=>{ paint(); save(); }));
- 
+
 document.getElementById('reset').addEventListener('click', async ()=>{
   boxes.forEach(b=>b.checked=false);
   paint();
-  try { await window.storage.delete('sdet-prep-v2'); }
+  try { localStorage.removeItem('sdet-prep-v2'); }
   catch(e){ console.error('Could not clear progress', e); }
 });
- 
+
 load();
 </script>
 </body>
 </html>
- 
-
-
-
-
-
-
