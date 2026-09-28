@@ -190,7 +190,7 @@ button.reset:hover{color:var(--ink)}
     <cite id="q-who">Wayne Gretzky</cite>
   </blockquote>
 
-  <p class="thesis">Three things, nothing else — Java, testing vocabulary, and <b>one framework covering UI and API together</b>. 25 days, one topic each, nothing practised before it's taught. <b>Rest days and applications are on you</b> — this only tracks the build.</p>
+  <p class="thesis">Three things, nothing else — Java, testing vocabulary, and <b>one framework covering UI and API together</b>. 20 days at ~3 hrs, chained so each one feeds the next: <b>learn it, practise it, then build with it.</b> Rest days and applications are on you.</p>
 
   <div class="note" style="margin-top:20px">
     <div class="eyebrow">On the early mornings</div>
@@ -221,163 +221,153 @@ button.reset:hover{color:var(--ink)}
   <!-- ================= PLAN ================= -->
   <section class="panel" role="tabpanel" id="panel-p" aria-labelledby="tab-p" data-week="p">
     <h2 class="p-title">Daily targets</h2>
-    <p class="p-why">One topic per day, and <b>nothing is practised before it's been taught</b> — a coding day only draws on Java concepts from an earlier day, never a later one. Rest days are yours to manage, so they're not scheduled here. Applications aren't on here either — you've got that covered yourself.</p>
+    <p class="p-why">Every day feeds the next. <b>Learn a thing → practise it on coding questions → use it in the project.</b> Nothing gets practised before it's taught. Each day says what it unlocks or uses, so the chain is visible rather than something you have to work out.</p>
 
     <div class="note" style="margin-top:0;margin-bottom:22px">
-      <div class="eyebrow">The dependency rule</div>
-      <p>Every Coding day only uses Java you've already covered in an earlier Java day. Every Project day only uses concepts already taught. <b>If a day's checklist ever asks you to use something you haven't learned yet, that's a bug — tell me and I'll fix the order.</b></p>
+      <div class="eyebrow">Time commitment</div>
+      <p><b>20 days at roughly 3–3.5 hrs each</b> — about 60 hours total. That's one topic per day, but a full one. If a day consistently runs over 4 hours, split it and let the plan stretch — 25 days at 2.5 hrs beats 20 days abandoned on day 8.</p>
     </div>
 
-    <div class="sub-head">Day 1 — Java</div>
+    <div class="sub-head">Day 1 — Java: the basics</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d1a"><span class="task">Block 1 — a class with a main method from a blank file, three times. Variables and types. if/else, switch, loops, methods, arrays</span></label></li>
+      <li><label><input type="checkbox" data-k="d1a"><span class="task">Block 1 — class with a main method from blank, variables and types, if/else, switch, loops, methods, arrays</span></label></li>
     </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Unlocks:</b> everything. Nothing else works without loops and methods.</p>
 
-    <div class="sub-head">Day 2 — Coding</div>
+    <div class="sub-head">Day 2 — Java: strings</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d2b"><span class="task">Coding tab, Tier 1 arrays and Tier 1 number logic — twelve questions, all built on yesterday's loops and arrays</span></label></li>
+      <li><label><input type="checkbox" data-k="d2a"><span class="task">Block 2 — length, charAt, substring, split, trim, contains, replace. Immutability, == vs equals, StringBuilder</span></label></li>
     </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Unlocks:</b> the string coding questions on Day 5.</p>
 
-    <div class="sub-head">Day 3 — Project</div>
+    <div class="sub-head">Day 3 — Java: collections</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d3d"><span class="task">Scaffold the project — Maven, dependencies, .gitignore, first commit. Write BaseTest with driver setup/teardown, then one throwaway test that just opens the browser and loads the config URL. Run it, then delete the throwaway test</span></label></li>
+      <li><label><input type="checkbox" data-k="d3a"><span class="task">Block 4 — ArrayList, HashMap, HashSet: core methods and iteration. List vs Set vs Map in one sentence each. Then internals: buckets, hashing, collisions, why hashCode and equals must agree</span></label></li>
     </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Unlocks:</b> the array and collections coding questions — duplicates with HashSet, two sum with HashMap, frequency counting with HashMap. <b>Deliberately before the coding days</b> so you solve those the way an interviewer expects.</p>
 
-    <div class="sub-head">Day 4 — Java</div>
+    <div class="sub-head">Day 4 — Coding: arrays</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d4a"><span class="task">Block 2 — strings: the methods you'll use, immutability, == vs equals, StringBuilder</span></label></li>
+      <li><label><input type="checkbox" data-k="d4b"><span class="task">Coding tab, Tier 1 arrays — all seven. HashSet for duplicates, HashMap for two sum. Then the brute-force version of each as the "now without extra space" follow-up</span></label></li>
     </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Uses:</b> Day 1 loops and arrays, Day 3 collections.</p>
 
-    <div class="sub-head">Day 5 — Coding</div>
+    <div class="sub-head">Day 5 — Coding: strings</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d5b"><span class="task">Coding tab, Tier 1 strings — all eight, now that strings are actually covered</span></label></li>
+      <li><label><input type="checkbox" data-k="d5b"><span class="task">Coding tab, Tier 1 strings — all eight. Character frequency and first non-repeating both want HashMap; anagram check wants sorting or a frequency map</span></label></li>
     </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Uses:</b> Day 2 strings, Day 3 collections.</p>
 
-    <div class="sub-head">Day 6 — Project</div>
+    <div class="sub-head">Day 6 — Coding: collections and number logic</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d6d"><span class="task">Login page class, then a real login test — valid credentials, confirm it lands on the right page. Run the suite</span></label></li>
+      <li><label><input type="checkbox" data-k="d6b"><span class="task">Coding tab, Tier 2 collections — all six. Plus Tier 1 number logic — all five, which only need loops</span></label></li>
     </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Uses:</b> Day 3 collections. Closes out everything you can do before OOP.</p>
 
-    <div class="sub-head">Day 7 — Java</div>
+    <div class="note">
+      <div class="eyebrow">Checkpoint</div>
+      <p><b>Java fundamentals, strings and collections covered, and every coding question that depends on them is done.</b> The framework starts next — it needs OOP, the only major gap left.</p>
+    </div>
+
+    <div class="sub-head">Day 7 — Java: OOP</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d7a"><span class="task">Block 3 — class vs object, constructors, encapsulation, inheritance, polymorphism, abstraction</span></label></li>
+      <li><label><input type="checkbox" data-k="d7a"><span class="task">Block 3 — class vs object, constructors, encapsulation, inheritance, polymorphism, abstraction. Map all four pillars onto your existing Selenium repo as you go</span></label></li>
     </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Unlocks:</b> the whole framework. Page objects are classes, BaseTest is inheritance, service classes are encapsulation.</p>
 
-    <div class="sub-head">Day 8 — Project</div>
+    <div class="sub-head">Day 8 — Project: skeleton</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d8d"><span class="task">Negative login tests — wrong password, blank fields, unregistered email. WaitUtils, zero Thread.sleep. Run after each addition</span></label></li>
+      <li><label><input type="checkbox" data-k="d8d"><span class="task">Maven, dependencies, .gitignore, first commit. BaseTest with driver setup and teardown, then one throwaway test that opens the browser and loads the config URL. Run it, confirm the pieces connect, delete the throwaway</span></label></li>
     </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Uses:</b> Day 7 OOP — BaseTest is the parent class every test will extend.</p>
 
-    <div class="sub-head">Day 9 — Project</div>
+    <div class="sub-head">Day 9 — Project: first real test</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d9d"><span class="task">Products and cart page classes, cart flow test — add, verify quantity and price, remove, verify empty state</span></label></li>
+      <li><label><input type="checkbox" data-k="d9d"><span class="task">Login page class with locators and methods, then a login test against it — valid credentials, confirm it lands on the right page. Run the suite</span></label></li>
+    </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Uses:</b> Day 8 BaseTest, Day 7 encapsulation — locators private, actions public.</p>
+
+    <div class="sub-head">Day 10 — Java exceptions + Selenium exceptions</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d10a"><span class="task">Block 5 — try/catch/finally, try-with-resources, checked vs unchecked, throw vs throws, custom exceptions, final vs finally vs finalize</span></label></li>
+      <li><label><input type="checkbox" data-k="d10b"><span class="task">Then Coding tab, Selenium exceptions — all eight, straight after, so the Java and Selenium versions connect while it's fresh</span></label></li>
+    </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Merged deliberately:</b> you've already debugged most of these Selenium exceptions for real — it's naming causes, not learning from scratch.</p>
+
+    <div class="sub-head">Day 11 — Project: waits and negative tests</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d11d"><span class="task">WaitUtils — visibility, clickability, invisibility, one FluentWait. Zero Thread.sleep anywhere. Then negative login tests: wrong password, blank fields, unregistered email. Assert the error text, not just that it failed</span></label></li>
+    </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Uses:</b> Day 10 — waits exist precisely to prevent NoSuchElement and StaleElement.</p>
+
+    <div class="sub-head">Day 12 — Project: cart flow and failure evidence</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d12d"><span class="task">Products and cart page classes. Cart flow test — add a product, verify quantity and price, remove it, verify the empty state. Then screenshot-on-failure via a JUnit 5 TestWatcher extension</span></label></li>
+      <li><label><input type="checkbox" data-k="d12e"><span class="task">UI half is feature-complete — run the whole UI suite start to finish</span></label></li>
     </ul>
 
     <div class="note">
       <div class="eyebrow">Checkpoint</div>
-      <p><b>Java blocks 1–3 done, all of Tier 1 coding done, UI login and cart flows fully tested.</b> Real, working coverage — not a skeleton you're hoping links up later.</p>
+      <p><b>UI half done and running. Java blocks 1–5 covered. All coding practice done bar the review pass.</b> The API half is next.</p>
     </div>
 
-    <div class="sub-head">Day 10 — Java</div>
+    <div class="sub-head">Day 13 — Java: streams and wrap-up</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d10a"><span class="task">Block 4 — ArrayList and HashMap fluency, then internals: buckets, hashing, collisions, ArrayList vs LinkedList</span></label></li>
+      <li><label><input type="checkbox" data-k="d13a"><span class="task">Streams — filter, map, collect, groupingBy. Lambdas at a basic level. Then block 6 — reread your own service classes and name every Java concept in them out loud</span></label></li>
+    </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Unlocks:</b> cleaner assertions in the API half — REST Assured code is full of lambdas.</p>
+
+    <div class="sub-head">Day 14 — Project: API setup and happy paths</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d14d"><span class="task">BaseApiTest, RequestSpecBuilder, ResponseSpecBuilder. Service classes returning Response, POJOs for request and response bodies. Then happy-path tests — product list, search, account creation, login</span></label></li>
+    </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Uses:</b> Day 7 OOP for POJOs and service classes, Day 13 lambdas for the REST Assured syntax.</p>
+
+    <div class="sub-head">Day 15 — Project: negative API paths</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d15d"><span class="task">Wrong credentials, missing required field, invalid ID, malformed payload, unsupported method. Assert status code <em>and</em> error body. Schema validation and a response-time assertion</span></label></li>
+    </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Fills:</b> the exact gap your current REST Assured repo has — it's all happy paths today.</p>
+
+    <div class="sub-head">Day 16 — Project: the crossover</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d16d"><span class="task">API creates a user, UI logs in with those credentials. Then the reverse — UI adds to cart, API verifies it landed. Be able to say why API setup beats doing it through the browser</span></label></li>
+    </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Needs both halves working</b>, which is why it's here. This is the part almost no junior candidate has.</p>
+
+    <div class="sub-head">Day 17 — Testing theory</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d17a"><span class="task">Testing tab — Core distinctions, Process, and Test design techniques. Fifteen items. You did all of this at Agasty; this is attaching the vocabulary</span></label></li>
     </ul>
 
-    <div class="sub-head">Day 11 — Coding</div>
+    <div class="sub-head">Day 18 — Testing theory and test case writing</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d11b"><span class="task">Coding tab, Tier 2 collections — all six, now that ArrayList and HashMap are covered</span></label></li>
+      <li><label><input type="checkbox" data-k="d18a"><span class="task">Testing tab — Architecture, API fundamentals, and SQL. Fifteen items</span></label></li>
+      <li><label><input type="checkbox" data-k="d18b"><span class="task">Reference tab, the test-case method — then write real cases for one Agasty feature from memory, walking all the coverage buckets</span></label></li>
+    </ul>
+    <p class="p-why" style="margin:-10px 0 14px 8px"><b>Anchors to:</b> the API work you just finished — status codes and auth types aren't abstract at this point.</p>
+
+    <div class="sub-head">Day 19 — Project: ship it</div>
+    <ul>
+      <li><label><input type="checkbox" data-k="d19d"><span class="task">Tags to split ui and api suites, parallel execution, confirm ThreadLocal holds up. README — what it tests, the stack, how to run it, why UI and API live together</span></label></li>
     </ul>
 
-    <div class="sub-head">Day 12 — Coding</div>
+    <div class="sub-head">Day 20 — Review and polish</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d12b"><span class="task">Coding tab, Tier 2 "actually gets asked" — balanced parentheses, sliding window, array rotation, pattern printing, substrings. The Stack question needs today's collections knowledge, so it belongs here</span></label></li>
+      <li><label><input type="checkbox" data-k="d20a"><span class="task">Redo three Tier 1 coding questions cold, from a blank file, no notes. Tier 2 "actually gets asked" — balanced parentheses, sliding window, array rotation, pattern printing, substrings</span></label></li>
+      <li><label><input type="checkbox" data-k="d20b"><span class="task">Whiteboard the whole project structure from memory. If you can't draw it, you can't defend it</span></label></li>
+      <li><label><input type="checkbox" data-k="d20c"><span class="task">Both project stories and the why-you-left line, said out loud, under 2 minutes each</span></label></li>
     </ul>
 
-    <div class="sub-head">Day 13 — Project</div>
+    <div class="sub-head">After day 20 — steady state</div>
     <ul>
-      <li><label><input type="checkbox" data-k="d13d"><span class="task">Screenshot-on-failure via a JUnit 5 TestWatcher extension. UI half is now feature-complete — run the whole UI suite start to finish</span></label></li>
-    </ul>
-
-    <div class="sub-head">Day 14 — Java</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d14a"><span class="task">Block 5 — exceptions: try/catch/finally, checked vs unchecked, custom exceptions</span></label></li>
-    </ul>
-
-    <div class="sub-head">Day 15 — Coding</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d15b"><span class="task">Coding tab, Selenium exceptions — all eight, right after learning Java exceptions so the two connect</span></label></li>
-    </ul>
-
-    <div class="note">
-      <div class="eyebrow">Checkpoint</div>
-      <p><b>UI half fully done and running, Java blocks 1–5 covered, all coding practice done except the review pass.</b> The API half starts next — it needs the OOP and exceptions you now have.</p>
-    </div>
-
-    <div class="sub-head">Day 16 — Project</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d16d"><span class="task">API half setup — BaseApiTest, RequestSpecBuilder, ResponseSpecBuilder, service classes and POJOs. Then the happy-path tests: product list, search, account creation, login. Run them against the live site</span></label></li>
-    </ul>
-
-    <div class="sub-head">Day 17 — Project</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d17d"><span class="task">Negative API paths — wrong credentials, missing field, invalid ID, malformed payload. Schema validation and a response-time assertion</span></label></li>
-    </ul>
-
-    <div class="sub-head">Day 18 — Java</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d18a"><span class="task">Block 5 finish — streams and lambdas. Block 6 — reread your own service classes, name every concept out loud</span></label></li>
-    </ul>
-
-    <div class="sub-head">Day 19 — Coding</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d19b"><span class="task">Redo three Tier 1 coding questions cold, from a blank file, no notes. Tier 3 tester-flavoured items <span class="opt">if time</span> — regex validation, random test data, the properties reader you basically already wrote in the project</span></label></li>
-    </ul>
-
-    <div class="sub-head">Day 20 — Project</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d20d"><span class="task">The crossover — API creates a user, UI logs in with those credentials. Then the reverse: UI adds to cart, API verifies it landed correctly</span></label></li>
-    </ul>
-
-    <div class="sub-head">Day 21 — Testing theory</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d21a"><span class="task">Testing tab, Core distinctions, Process and Test design techniques — fifteen items. You know this from the job, just attach the words</span></label></li>
-    </ul>
-
-    <div class="sub-head">Day 22 — Testing theory</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d22a"><span class="task">Testing tab, Architecture, API fundamentals and SQL — fifteen items</span></label></li>
-    </ul>
-
-    <div class="note">
-      <div class="eyebrow">Checkpoint</div>
-      <p><b>Project is functionally complete, Java and testing theory are fully covered.</b> Everything left is polish and reps.</p>
-    </div>
-
-    <div class="sub-head">Day 23 — Reference</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d23a"><span class="task">Reference tab, the test-case method — then write real cases for one Agasty feature from memory</span></label></li>
-    </ul>
-
-    <div class="sub-head">Day 24 — Project</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d24d"><span class="task">Tags to split ui/api suites, parallel execution, confirm ThreadLocal holds. README written</span></label></li>
-    </ul>
-
-    <div class="sub-head">Day 25 — Polish</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d25a"><span class="task">Whiteboard the whole project structure from memory. If you can't draw it, you can't defend it</span></label></li>
-      <li><label><input type="checkbox" data-k="d25b"><span class="task">Both project stories and the why-you-left line, said out loud, under 2 minutes each</span></label></li>
-    </ul>
-
-    <div class="sub-head">Day 26 onward — steady state</div>
-    <ul>
-      <li><label><input type="checkbox" data-k="d26a"><span class="task">Rename the old RestAssured repo classes to PascalCase, add negative tests there too</span></label></li>
-      <li><label><input type="checkbox" data-k="d26b"><span class="task">From here, prioritise interview prep for anything that actually comes in over adding new material</span></label></li>
+      <li><label><input type="checkbox" data-k="d21a"><span class="task">Rename the old RestAssured repo classes to PascalCase, add negative tests there too</span></label></li>
+      <li><label><input type="checkbox" data-k="d21b"><span class="task">From here, prioritise interview prep for anything that actually comes in over adding new material</span></label></li>
     </ul>
 
     <div class="note">
       <div class="eyebrow">If a day slips</div>
-      <p>Pick up on the same topic where you left off — don't cram two lanes into one day to catch up. <b>Losing a day costs nothing. Practising something before it's taught, or switching topics mid-day, is what actually breaks the plan.</b></p>
+      <p>Pick up the same topic where you left off. <b>Don't skip ahead past something a later day depends on</b> — the order is the whole point. Losing a day costs nothing; breaking the chain costs a lot.</p>
     </div>
   </section>
 
